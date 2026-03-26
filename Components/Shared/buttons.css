@@ -1,0 +1,104 @@
+/* This is the main btn style */
+.btn {
+  display: inline-flex;
+  height: 48px;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-main);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s ease-in;
+  border-radius: var(--radius-sm);
+
+}
+
+
+.btn-pill {
+  display: inline-flex;
+  height: 36px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-main);
+  font-size: var(--fs-body-small);
+  font-weight: 400;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s ease-in;
+  border-radius: var(--radius-lg);
+
+}
+
+
+/* Button variants */
+
+/* Square buttons ---------------------------------------------------------------- */
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+.btn-outline {
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+  border: solid 2px var(--color-secondary);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-secondary-light);
+}
+
+
+/* Pill buttons ---------------------------------------------------------------- */
+
+.btn-pill-primary {
+  background-color: var(--color-primary);
+  color: white;
+
+}
+
+.btn-pill-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-pill-secondary {
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 8px 16px;
+
+}
+
+.btn-pill-secondary:hover {
+  background-color: var(--color-secondary-hover);
+
+}
+
+.btn-pill-outline {
+  background-color: var(--color-white);
+  color: var(--color-grey-900);
+  border: solid 2px var(--color-gray-300);
+
+}
+
+.btn-pill-outline:hover {
+  background-color: var(--color-gray-100);
+}
