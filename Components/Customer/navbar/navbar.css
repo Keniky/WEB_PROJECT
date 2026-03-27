@@ -1,0 +1,130 @@
+.navbar {
+  width: 100%;
+  font-family: var(--font-main);
+}
+
+/* TOP BAR */
+.navbar__top {
+  background: var(--color-primary);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-lg);
+  font-size: var(--fs-small);
+}
+
+.navbar__social {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* MAIN BAR */
+.navbar__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-primary);
+}
+
+/* LOGO */
+.navbar__logo img {
+  height: 40px;
+}
+
+/* SEARCH */
+.navbar__search {
+  display: flex;
+  flex: 1;
+  max-width: 600px;
+  margin: 0 var(--space-lg);
+  background: white;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.search__category {
+  border: none;
+  padding: 10px;
+  background: var(--color-gray-200);
+}
+
+.navbar__search input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+}
+
+.search__btn {
+  border: none;
+  background: transparent;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+/* ACTIONS */
+.navbar__actions {
+  display: flex;
+  gap: 15px;
+}
+
+/* MOBILE TOGGLE */
+.navbar__toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+}
+
+/* BOTTOM BAR */
+.navbar__bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--color-gray-200);
+}
+
+.category-btn {
+  background: var(--color-gray-300);
+  border: none;
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+}
+
+/* ========================= */
+/*  RESPONSIVE */
+/* ========================= */
+
+/* Hide top bar, search, and actions on mobile, show toggle button (figure out later how to implement)
+menu and categories can be hidden on mobile for now, or we can implement a simple dropdown menu for categories
+*/
+
+@media (max-width: 768px) {
+
+  .navbar__top {
+    display: none;
+  }
+
+  .navbar__search {
+    display: none;
+  }
+
+  .navbar__actions {
+    display: none;
+  }
+
+  .navbar__toggle {
+    display: block;
+  }
+
+  .navbar__bottom {
+    display: none;
+  }
+}
