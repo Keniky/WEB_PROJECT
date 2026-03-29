@@ -47,6 +47,7 @@
   border: none;
   transition: 0.2s ease-in;
   border-radius: var(--radius-lg);
+  box-sizing: border-box;
   user-select: none;
 }
 

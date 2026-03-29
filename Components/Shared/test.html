@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="controls.css"/>
         <link rel="stylesheet" href="ratings.css">
         <link rel="stylesheet" href="frame.css">
+        <link rel="stylesheet" href="input.css">
     </head>
     <body>
         <!--buttons-->
@@ -195,6 +196,90 @@
             <label for="star4">star</label>
             <input type="radio" name="star" id="star5">
             <label for="star5">star</label>
+        </div>
+        <br>
+        <div>
+            
+        </div>
+        <div class=" inline-display">
+            <span class="frame material-icons"> videocam</span>
+            <span class="frame material-icons"> image</span>
+        </div>
+
+        <!-- label follows id not name -->
+
+        <div class = "text-input">
+            <i class = "material-icons">visibility</i>
+            <input type="text" id = "text-input" placeholder="Please Enter your text">
+            <span>
+                <input type="checkbox" checked class = "password-i">
+                <i class = "material-icons password-i">visibility</i> 
+            </span>
+        </div>
+        <div class = "text-input disabled">
+            <i class = "material-icons">visibility</i>
+            <input type="text" disabled id = "text-input" placeholder="Please Enter your text"> 
+        </div>
+
+        <div class="rich-text">
+            <textarea id="review" placeholder="please insert what you want" rows = 13></textarea>
+            <div class="rich-text-bottom">
+                <label>
+                    <input type="checkbox">
+                    <span class = "material-icons">format_bold</span>
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    <span class = "material-icons">format_italic</span>
+                </label>
+                
+                <label>
+                    <input type="checkbox">
+                    <span class = "material-icons" id="s">Ꞩ</span>
+                </label>
+               
+                <span class = "divider"></span>
+                
+                <label>
+                    <input type="checkbox">
+                    <span class = "material-icons">format_list_bulleted</span>
+                </label>
+                
+                <label>
+                    <input type="checkbox">
+                    <span class = "material-icons">format_list_numbered</span>
+                </label>
+                
+                <span class = "divider"></span>
+
+                <label>
+                    <input type="checkbox">
+                    <span class = "material-icons">format_quote</span>
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    <span class = "material-icons">code</span>
+                </label>
+               
+                <div class="button-send">
+                    <span id="send-message">Send</span>
+                    <span class = "material-icons">send</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div>
+            <div class = "text-input">
+                <div class="item-menu">
+                    <span class="material-icons">menu</span>
+                    <span>All items</span>
+                </div>
+                <input type="text" id = "text-input" placeholder="Please Enter your text">
+                <i class = "material-icons">search</i> 
+            </div>
         </div>
     </body>
 </html>

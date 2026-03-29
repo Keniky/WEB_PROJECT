@@ -1,4 +1,11 @@
 .frame{
     width: 160px;
     height:160px;
+    border: solid 2px black;
+    margin-top: var(--space-md);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-gray-100);
+    margin-right: var(--space-md);
 }
