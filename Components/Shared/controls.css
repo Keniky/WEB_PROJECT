@@ -1,0 +1,194 @@
+/* stole code from here 
+https://stackoverflow.com/questions/2639373/how-do-i-change-the-color-of-the-check-mark-within-the-checkbox-input
+*/
+
+/*checkbox styling*/
+.fading-color{
+    opacity: 0.4;
+}
+
+.checkbox input{
+    margin-right: 0.5rem;
+    margin-top:0.5rem ;
+    vertical-align: middle;
+}
+
+.checkbox input[type='checkbox']:checked {
+  background-color: var(--color-gray-700);
+}
+.checkbox input[type='checkbox']:checked::after {
+  content: '\2713';
+  color:white;
+}
+.checkbox input[type='checkbox']{
+  text-align: center;
+  width: 25px !important;
+  height: 25px !important;
+  /*remove os default rendering and use mine*/
+  appearance:none;
+  border: 2px solid var(--color-gray-700);
+  font-size: 1em;
+  
+}
+
+/*radio styling*/
+.radio input[type='radio']{
+    transform: scale(1.5);
+}
+
+.radio input[type='radio']:checked{
+    accent-color: var(--color-gray-700);
+}
+
+
+/*toggle styling*/
+/* stole it from geeks for geeks 
+https://www.w3schools.com/howto/howto_css_switch.asp */ 
+/* ok i leared something interesting about before and after they add fake elements
+    before the first element and after the last element
+*/
+
+.switch{
+    margin-top:10px;
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 16px;
+}
+
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.toggleslider{
+    /* take the whole space */
+    position: absolute;
+    left:0px;
+    right:0px;
+    bottom: 0px;
+    top:0px;
+    background-color: white;
+    border: var(--color-gray-700) solid 2px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+/* before you do anything draw this white circle firts */
+.toggleslider::before{
+    position:absolute;
+    content: "";
+    background-color: var(--color-gray-700);
+    height: 13px;
+    width: 13px;
+    left:2px;
+    bottom: -0.8px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+/* the span that has toggleslider and circle ? make it idk what */
+/* the span that ... make it circular */
+.toggleslider.round{
+    border-radius: var(--radius-lg);
+}
+
+.toggleslider.round::before{
+    border-radius:50%;
+}
+
+.switch input:checked + .toggleslider{
+    background-color: var(--color-gray-700);
+}
+.switch input:checked + .toggleslider::before{
+    background-color: white;
+    transform: translateX(20px);
+}
+
+
+/*slider */
+/* i stole it from here 
+https://www.w3schools.com/howto/howto_js_rangeslider.asp
+ */
+input[type = "range"]{
+    accent-color: var(--color-gray-700);
+}
+
+
+/* page navigation tools */
+.inline-display{
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    margin: var(--space-sm) 0px;
+}
+
+.circle{
+    position: relative;
+    width:var(--radius-elg);
+    height:var(--radius-elg);
+    border:var(--color-gray-700) solid 2px;
+    border-radius: 50%;
+    font-size: var(--fs-body-big);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition:0.2s ease-in;
+    margin: 0px 5px ;
+    user-select: none;
+}
+
+.circle:hover{
+    background-color: var(--color-gray-300);
+}
+.circle:active{
+    transform: translateY(4px);
+}
+
+.arrow-back:before{
+    content: "arrow_back";
+}
+
+.arrow-forward:before{
+    content:"arrow_forward";
+}
+/*select page with number*/
+
+
+.number-circle input{
+    display: none;
+}
+
+.number-circle:has(input:checked)  {
+    background-color: var(--color-gray-700);
+    
+}
+
+
+/* for the select page with no number */
+
+.page-index input[type = "radio"]{
+    accent-color: var(--color-secondary);
+}
+
+
+/* Quantity*/
+.quantity{
+    margin: 20px;
+    border: 2px solid var(--color-gray-900);
+    height: 50px;
+    font-family: var(--font-main);
+    user-select: none;
+}
+.quantity label{
+    margin: 0px var(--space-md);
+}
+
+.alter-quantity:hover{
+    box-shadow: var(--shadow-md);
+    color:var(--color-secondary);
+}
+.alter-quantity:active{
+    transform: translateY(2px);
+}

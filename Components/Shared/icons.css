@@ -1,0 +1,31 @@
+.icon{
+    display: inline-flex;
+    height: var(--iconheight);
+    width: var(--iconwidth);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s ease-in;
+    user-select: none;
+}
+.icon:hover{
+    background-color: var(--color-gray-500);
+}
+
+/* inserts content to my html 3lah ? its way to reuse code ,  */
+/*change this to javascript in the fututre*/
+
+.shop-logo{
+    display: inline-flex;
+    height: var(--shopheight);
+    width: var(--shopwidth);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+.shop-logo::before{
+    content: url("../images/ShopPal-Logo.png");
+}

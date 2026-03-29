@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Test Page</title>
+        <link rel="stylesheet" href="buttons.css">
+        <link rel="stylesheet" href="../../Design_System/css/variables.css"/>
+        <link rel="stylesheet" href="icons.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="iconbuttons.css"/>
+        <link rel="stylesheet" href="controls.css"/>
+        <link rel="stylesheet" href="ratings.css">
+        <link rel="stylesheet" href="frame.css">
+    </head>
+    <body>
+        <!--buttons-->
+        <div class = "btn-enabled btn btn-primary">
+            test
+        </div>     
+        <div class = "btn-enabled btn btn-secondary">
+            test2
+        </div>
+        <div class = "btn-enabled btn btn-outline">
+            test3
+        </div>
+        <div class = "btn btn-primary disabled">
+            test
+        </div>     
+        <div class = "btn btn-secondary disabled">
+            test2
+        </div>
+        <div class = "btn btn-outline disabled">
+            test3
+        </div>
+        
+        <br>
+        
+        <!--icon-->
+        <div class = "material-icons icon">
+            <!-- write icon name from google -->
+            <!-- https://fonts.google.com/icons?icon.query=search-->
+            
+        </div>
+        
+        <br>
+        <!--pill-->
+        <div class = "btn-enabled btn-pill btn-pill-primary">
+            test
+        </div>     
+        <div class = "btn-enabled btn-pill btn-pill-secondary">
+            test2
+        </div>
+        <div class = "btn-enabled btn-pill btn-outline">
+            test3
+        </div>
+        <div class = "btn-pill btn-pill-primary disabled ">
+            test
+        </div>     
+        <div class = "btn-pill btn-pill-secondary disabled">
+            test2
+        </div>
+        <div class = " btn-pill btn-outline disabled">
+            test3
+        </div>
+
+        <!--shop logo -->
+        <br>
+
+        <div>
+            <span class = "shop-logo"></span>
+        </div>
+        <br>
+
+        <!--icon button-->
+        <div class = "btn-enabled icon-btn icon-btn-primary">
+            test
+        </div>     
+        <div class = "btn-enabled icon-btn  icon-btn-secondary">
+            test2
+        </div>
+        <div class = "btn-enabled icon-btn  icon-btn-outline">
+            test3
+        </div>
+        <div class = "icon-btn icon-btn-primary disabled">
+            test
+        </div>     
+        <div class = "icon-btn  icon-btn-secondary disabled">
+            test2
+        </div>
+        <div class = "icon-btn  icon-btn-outline disabled">
+            test3
+        </div>
+        <br>
+        <div class="checkbox">
+            <input type="checkbox" checked/>
+            <input type="checkbox" />
+            <input type="checkbox" class="fading-color" checked/>
+            <input type="checkbox" class="fading-color" />
+        </div>
+        <div class="radio">
+            <input type="radio" name="idk" checked/>
+            <input type="radio" name="idk" />
+            <input type="radio" name="idk" class="fading-color" checked/>
+            <input type="radio" name="idk" class="fading-color" />
+        </div>
+        <div>
+            <label class="switch">
+                <!-- trick to take input without javascript -->
+                <input type="checkbox"/>
+                <span class="toggleslider round"></span>
+            </label>
+
+            <label class="switch">
+                <!-- trick to take input without javascript -->
+                <input type="checkbox" checked/>
+                <span class="toggleslider round"></span>
+            </label>
+        </div>
+        <!-- slider now -->
+
+        <div>
+            <input type="range" min="1" max="100"/>
+        </div>
+        <br>
+        
+        <div class="inline-display">
+            <label class="material-icons circle arrow-back "></label>
+            <!-- same trick that i used before to do the checkbox -->
+            <label class="circle number-circle">
+                <input type="radio" name="page-index"/>
+                <span>01</span>
+            </label>
+            
+            <label class="circle number-circle">
+                <input type="radio" name="page-index"/>
+                <span>02</span>
+            </label>
+
+            <label class="circle number-circle">
+                <input type="radio" name="page-index"/>
+                <span>03</span>
+            </label>
+
+            <label class="circle number-circle">
+                <input type="radio" name="page-index"/>
+                <span>04</span>
+            </label>
+            
+            <label class="circle number-circle">
+                <input type="radio" name="page-index"/>
+                <span>05</span>
+            </label>
+
+
+            <label class="circle number-circle">
+                <input type="radio" name="page-index"/>
+                <span>06</span>
+            </label>
+            
+            <label class="material-icons circle arrow-forward "></label>
+        </div>
+        <br>
+        <div class = "inline-display">
+            <label class = "material-icons circle arrow-back">            </label>
+            <div>
+                <input type="radio" name="pageindex"/>
+                <input type="radio" name="pageindex"/>
+                <input type="radio" name="pageindex"/>
+                <input type="radio" name="pageindex"/>
+                <input type="radio" name="pageindex"/>
+                <input type="radio" name="pageindex"/>
+            </div>
+
+            <label class = "material-icons circle arrow-forward"> </label>
+        </div>
+        <br>
+        <div class="inline-display quantity">
+            <label class = "material-icons alter-quantity">remove</label>
+            <label>1</label>
+            <label class = "material-icons alter-quantity">add</label>
+        </div>
+        <br>
+        <!-- add rating -->
+         <!-- two fucking hours with this shit just to discover that i fucking
+              wasted all my time on a simple bug and all the retard llms were giving me random answers 
+         -->
+        <div class="material-icons ratings">
+            <input type="radio" name="star" id="star1">
+            <label for="star1">star</label>
+            <input type="radio" name="star" id="star2">
+            <label for="star2">star</label>
+            <input type="radio" name="star" id="star3">
+            <label for="star3">star</label>
+            <input type="radio" name="star" id="star4">
+            <label for="star4">star</label>
+            <input type="radio" name="star" id="star5">
+            <label for="star5">star</label>
+        </div>
+    </body>
+</html>

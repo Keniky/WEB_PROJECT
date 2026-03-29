@@ -1,0 +1,45 @@
+.icon-btn{
+  display: inline-flex;
+  height: 24px;
+  width: 12px;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-main);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s ease-in;
+  border-radius: var(--radius-sm);
+  user-select: none;
+}
+
+.icon-btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.icon-btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.icon-btn-secondary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.icon-btn-secondary:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+.icon-btn-outline {
+  background-color: var(--color-white);
+  color: var(--color-gray-900);
+  border: solid 2px var(--color-gray-500);
+}
+
+.icon-btn-outline:hover {
+  background-color: var(--color-secondary-light);
+}

@@ -27,6 +27,7 @@
   --color-gray-900: #212121;
   --color-white: #FFFFFF;
 
+  --fog-opacity: 0.7;
 
   /* TYPOGRAPHY */
   --font-main: 'Inter', sans-serif;
@@ -55,8 +56,14 @@
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 24px;
+  --radius-elg: 36px;
 
   /* SHADOW */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  
+  /* ICONS */
+  --iconheight : 24px;
+  --iconwidth : 24px;
 }

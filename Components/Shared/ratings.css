@@ -1,0 +1,42 @@
+/* 
+https://www.youtube.com/watch?v=4mfPjGb6y84
+stole it from here
+*/
+.ratings{
+    color:var(--color-gray-700);
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+}
+
+.ratings input{
+    display: none;
+}
+
+.ratings label{
+    display: block;
+    cursor: pointer;
+}
+
+
+/* after hovering over , after hovering over the rating do it to the previous rating after  pressing */
+/* hover over a rating edit it , hover over rating edit what is after it , after clicking hover what is after it then we inverse it */
+/*~ selects elements that comes after what you selected */
+
+
+
+.ratings label:hover,
+.ratings label:hover + label,
+.ratings label:hover ~ label{
+    color: var(--color-secondary);
+}
+
+
+.ratings input[type="radio"]:checked + label,
+.ratings input[type="radio"]:checked ~ label{
+    color: var(--color-secondary);
+}
+
+
+
+
