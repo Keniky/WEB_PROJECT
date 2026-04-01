@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../../Assets/Fonts/InterVariable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../../Assets/Fonts/InterVariable-Italic.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
