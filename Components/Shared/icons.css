@@ -9,23 +9,25 @@
     border: none;
     transition: 0.2s ease-in;
     user-select: none;
+    
 }
 .icon:hover{
-    background-color: var(--color-gray-500);
+    background-color: var(--color-gray-300);
 }
 
 /* inserts content to my html 3lah ? its way to reuse code ,  */
 /*change this to javascript in the fututre*/
 
 .shop-logo{
-    display: inline-flex;
-    height: var(--shopheight);
-    width: var(--shopwidth);
-    justify-content: center;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
     cursor: pointer;
     user-select: none;
+    padding-left: var(--space-md);
 }
 .shop-logo::before{
     content: url("../images/ShopPal-Logo.png");
 }
+
+

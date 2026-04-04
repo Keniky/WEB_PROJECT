@@ -1,0 +1,11 @@
+.admin{
+    padding-inline: var(--space-sm);
+    border-radius: var(--radius-elg);
+    background-color: var(--color-primary-hover);
+}
+
+.client{
+    padding-inline: var(--space-sm);
+    border-radius: var(--radius-elg);
+    background-color: var(--color-warning-yellow);
+}

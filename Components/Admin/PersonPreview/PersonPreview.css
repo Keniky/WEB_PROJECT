@@ -1,0 +1,25 @@
+.person-preview{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.32px;font-family: 'Inter';
+}
+.person-preview-pfp{
+    display: flex;
+    align-items: center;
+}
+.person-preview-info{
+    margin-left: 40px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+
+}
+.person-preview-info label{
+    padding: 3px;
+}
