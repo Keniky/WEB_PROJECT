@@ -8,11 +8,19 @@
   <link rel="stylesheet" href="product_cards/product_item_large/product_item_large.css" />
   <link rel="stylesheet" href="product_cards/product_item/product_item.css" />
   <link rel="stylesheet" href="navbar/navbar.css" />
+  <link rel="stylesheet" href="footer/footer.css" />
   <link rel="stylesheet" href="../Shared/iconbuttons.css">
   <link rel="stylesheet" href="../../Design_System/CSS/variables.css">
   <link rel="stylesheet" href="../../Design_System/CSS/fonts.css">
   <title>Document</title>
 </head>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+</style>
 
 <body>
 
@@ -56,62 +64,67 @@
     </div>
   </div> -->
 
-<header class="navbar">
+  <header class="navbar">
 
-  <!-- Top Bar -->
-  <div class="navbar__top">
-    <p>Welcome to ShopPal online eCommerce store.</p>
+    <!-- Top Bar -->
+    <div class="navbar-top">
+      <p>Welcome to ShopPal online eCommerce store.</p>
 
-    <div class="navbar__social">
-      <span>Join Us:</span>
-      <a href="#"><img src="../../assets/icons/youtube.svg" class="icon"></a>
-      <a href="#"><img src="../../assets/icons/facebook.svg" class="icon"></a>
-      <a href="#"><img src="../../assets/icons/twitter.svg" class="icon"></a>
-      <a href="#"><img src="../../assets/icons/instagram.svg" class="icon"></a>
-      <a href="#"><img src="../../assets/icons/linkedin.svg" class="icon"></a>
-    </div>
-  </div>
-
-  <!-- Main Bar -->
-  <div class="navbar__main">
-
-    <!-- Logo -->
-    <div class="navbar__logo">
-      <img src="WEB_PROJECT/Components/images/ShopPal-Logo.png" alt="ShopPal">
+      <div class="navbar-social">
+        <span>Join Us:</span>
+        <a href="#"><img src="../../Assets/Icons/Facebook.svg" class="icon"></a>
+        <a href="#"><img src="../../Assets/Icons/Twitter.svg" class="icon"></a>
+        <a href="#"><img src="../../Assets/Icons/Instagram.svg" class="icon"></a>
+      </div>
     </div>
 
-    <!-- Search -->
-    <div class="navbar__search">
-      <select class="search__category">
-        <option>All Items</option>
-      </select>
+    <!-- Main Bar -->
+    <div class="navbar-main">
 
-      <input type="text" placeholder="Search">
+      <!-- Logo -->
+      <div class="navbar-logo">
+        <img src="../../Assets/Images/ShopPal-Logo.png" alt="ShopPal">
+      </div>
 
-      <button class="search__btn">
-        🔍
-      </button>
+      <!-- Search -->
+      <div class="navbar-search">
+        <select class="search-category">
+          <option>All Items</option>
+          <option>Phones</option>
+        </select>
+
+        <input type="text" placeholder="Search">
+
+        <button class="search-btn">
+          <img src="../../Assets/Icons/search.svg" class="icon">
+        </button>
+      </div>
+
+      <!-- Actions -->
+      <div class="navbar-actions">
+        <a href="#"><img src="../../Assets/Icons/shopping-cart.svg" class="icon"></a>
+        <a href="#"><img src="../../Assets/Icons/heart.svg" class="icon"></a>
+        <a href="#"><img src="../../Assets/Icons/user.svg" class="icon"></a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="navbar-toggle"><img src="../../Assets/Icons/menu.svg" class="icon"></div>
+
     </div>
 
-    <!-- Actions -->
-    <div class="navbar__actions">
-      <a href="#"><img src="../../assets/icons/cart.svg" class="icon"></a>
-      <a href="#"><img src="../../assets/icons/heart.svg" class="icon"></a>
-      <a href="#"><img src="../../assets/icons/user.svg" class="icon"></a>
+    <!-- Bottom Bar -->
+    <div class="navbar-bottom">
+      <div class="category-btn">
+        <span>All Categories</span>
+        <img src="../../Assets/Icons/chevron-down.svg" class="icon">
+      </div>
+      <div class="support">
+        <img src="../../Assets/Icons/Headset.svg" class="icon">
+        <span>Support</span>
+      </div>
     </div>
 
-    <!-- Mobile Menu Button -->
-    <button class="navbar__toggle">☰</button>
-
-  </div>
-
-  <!-- Bottom Bar -->
-  <div class="navbar__bottom">
-    <button class="category-btn">All Categories ▼</button>
-    <div class="support">🎧 Support</div>
-  </div>
-
-</header>
+  </header>
 
 </body>
 
