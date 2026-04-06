@@ -1,0 +1,153 @@
+/* just added flex: 1 to it takes all space */
+/* ofc added it , in mm device span */
+.orders{
+    margin-left: var(--space-md);
+    background-color: white;
+}
+.orders table{
+    outline: none;
+    display: flex;
+    flex-direction: column;
+}
+.orders tr{
+    margin-top: var(--space-sm);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: var(--space-sm);
+    border-bottom: 1px black solid;
+    box-sizing: border-box;
+}
+
+
+.orders tr th{
+    color: var(--color-gray-500);
+}
+
+tbody tr:hover{
+    cursor: pointer;
+}
+tbody tr:active{
+    background-color: var(--color-error-red);
+}
+
+#test{
+    accent-color: var(--color-gray-700);
+    appearance: none;
+
+}
+
+.orders tr th,
+.orders tr td{
+    display: flex;
+    flex: 1;
+    padding-right:20px;
+    user-select: none;
+}
+
+
+
+.orders td:nth-child(1),
+.orders th:nth-child(1){
+    flex-basis: 100px;
+}
+
+.orders td:nth-child(2),
+.orders th:nth-child(2){
+    flex-basis: 200px;
+}
+
+.orders td:nth-child(3),
+.orders th:nth-child(3){
+    justify-content: center;
+    flex-basis: 150px;
+}
+
+.orders td:nth-child(4),
+.orders th:nth-child(4){
+    justify-content: center;
+    flex-basis: 100px;
+}
+
+.orders td:nth-child(5),
+.orders th:nth-child(5){
+    flex-basis: 150px;
+}
+
+.orders td:nth-child(6),
+.orders th:nth-child(6){
+    flex-basis: 100px;
+    justify-content: center;
+}
+
+
+.status:hover{
+    cursor: pointer;
+
+}
+/* button above the table */
+.utility-button{
+    margin-left: var(--space-md);
+    display: flex;
+    flex-direction: row;
+}
+
+.utility-button button{
+    display: flex;
+    align-items: center;
+    outline: none;
+    border: none;
+    background-color: var(--color-gray-100);
+    border: 2px solid var(--color-gray-500);
+    padding-inline: var(--space-sm);
+    border-radius: var(--radius-elg);
+}
+
+.utility-button button:hover{
+    cursor: pointer;
+}
+
+.utility-button button:active{
+    transform:translateY(2px);
+}
+
+.utility-button button > img {
+    margin-inline:var(--space-sm) ;
+}
+.utility-button button > i {
+    margin-right:var(--space-sm) ;
+}
+
+.actions{
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+}
+
+.actions img:hover{
+    cursor: pointer;
+    background-color: var(--color-gray-300);
+}
+
+.cash{
+    padding-inline: var(--space-sm);
+    border-radius: var(--radius-elg);
+    background-color: var(--color-success-green);
+}
+.paid{
+    padding-inline: var(--space-sm);
+    border-radius: var(--radius-elg);
+    background-color: var(--color-warning-yellow);
+}
+
+.active{
+    padding-inline: var(--space-sm);
+    border-radius: var(--radius-elg);
+    background-color: var(--color-primary-hover);
+}
+.delivered{
+    padding-inline: var(--space-sm);
+    border-radius: var(--radius-elg);
+    background-color: var(--color-success-green);
+}
+

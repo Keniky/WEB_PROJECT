@@ -1,0 +1,30 @@
+.tap-bar div input[type="checkbox"]{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.inline-display{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    font-family: 'Inter';
+    padding-inline:12px;
+    user-select: none;
+    color: var(--color-gray-500);
+}
+
+
+.tab-bar input[type="radio"]{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+}
+
+.tab-bar input[type="radio"]:checked + i {
+    color: black;
+}
