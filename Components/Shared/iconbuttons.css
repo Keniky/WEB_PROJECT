@@ -1,8 +1,7 @@
 .icon-btn{
   display: inline-flex;
-  height: 24px;
-  width: 12px;
-  padding: 12px 16px;
+  height: 48px;
+  width: 48px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -14,6 +13,7 @@
   transition: 0.2s ease-in;
   border-radius: var(--radius-sm);
   user-select: none;
+  box-sizing: border-box;
 }
 
 .icon-btn-primary {
