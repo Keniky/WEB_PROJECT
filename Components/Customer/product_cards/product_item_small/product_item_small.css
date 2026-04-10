@@ -24,6 +24,7 @@
   height: 80px;
   background-size: contain;
   background-position: 50% 50%;
+  background-color: #E0E0E0;
   background-image: url();
   background-repeat: no-repeat;
 }
@@ -66,7 +67,7 @@
   width: fit-content;
   font-family: var(--font-main);
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-primary, #1976D2);
   font-size: var(--fs-body);
   white-space: nowrap;
 }

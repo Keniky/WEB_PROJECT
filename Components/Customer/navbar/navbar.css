@@ -2,6 +2,7 @@
   width: 100%;
   font-family: var(--font-main);
   box-sizing: border-box;
+
 }
 
 /* TOP BAR */
@@ -27,17 +28,11 @@
 }
 
 .navbar-social .icon {
-  width: 20px;
-  height: 20px;
-  aspect-ratio: 1/1;
+  width: 14px;
+  height: 14px;
+  filter: brightness(0) invert(1);
 }
 
-.icon {
-  filter: brightness(0) invert(1);
-  /* Make icons white */
-  width: 28px;
-  height: 29px;
-}
 
 /* MAIN BAR */
 .navbar-main {
@@ -142,6 +137,12 @@
 .navbar-actions {
   display: flex;
   gap: 15px;
+}
+
+.navbar-actions .icon {
+  width: 28px;
+  height: 29px;
+  filter: brightness(0) invert(1);
 }
 
 /* MOBILE TOGGLE */
