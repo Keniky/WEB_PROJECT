@@ -94,7 +94,9 @@
     /* to fix the size of the border outside the thing */
     box-sizing: border-box;
     user-select: none;
+
 }
+
 .device span{
     flex: 1;
 }
@@ -137,6 +139,10 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+.category > div{
+    flex:1;
+}
+
 .single-category{
     margin-inline: var(--space-sm);
     margin-bottom:var(--space-sm) ;
@@ -151,3 +157,52 @@
 .single-category:hover{
     background-color:var(--color-gray-300)
 }
+
+
+a{
+    text-decoration: none;
+}
+
+
+/* add device stuff  */
+.add-device-top{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    padding: var(--space-md) var(--space-lg);
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.add-device-bottom{
+    padding: var(--space-md) var(--space-lg);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:50px;
+}
+
+
+.product-details{
+    display: flex;
+    flex-direction: column; 
+}
+
+.product-details-input{
+    display: flex;
+    flex-direction: column;   
+}
+.product-details-input input[type = "text"]{
+    padding-block: var(--space-sm);
+    padding-right: 30vh;
+    margin-block: var(--space-sm);
+    outline: none;
+}
+
+.product-details-input-brandCategory{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
