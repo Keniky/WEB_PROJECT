@@ -17,7 +17,7 @@
     </head>
     <body>
         <div class="container">
-            <div class="side-bar">
+            <nav class="side-bar">
                 <div class="side-bar-upper">
                     <div>
                         <span class = "shop-logo"></span>
@@ -47,7 +47,7 @@
                     </a>
                     <a class="icon" href="userManagment.html">
                         <span class="material-icons">person</span>
-                        <i>Customers</i>
+                        <i>Users</i>
                     </a>
                     <a class="icon">
                         <img src="../../Assets/Icons/Settings.svg" class="icon">
@@ -60,11 +60,11 @@
                         <i>log Out</i>
                     </label>
                 </button>
-            </div>
+            </nav>
             <!-- top bar right side -->
-            <div class="right-side">
+            <section class="right-side">
                 <!-- upper -->
-                <div class="top-bar">
+                <header class="top-bar">
 
                     <span class="notification">
                         <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -82,20 +82,30 @@
                         Boudaira Karim
                     </span>
 
-                </div>
+                </header>
                 <!-- lower -->
-                <div class="bottom-bar">
+                <section class="bottom-bar">
+
                     <div class="user-name">
                         <label>Orders Managment</label>
                     </div>
+
                     <div class="utility">
 
                         <div class="utility-button">
+                            
                             <button>
                                 <img src="../../Assets/Icons/x.svg">
                                 <i>Cancel</i>
                             </button>
+
+
+                            <button>
+                                <img src="../../Assets/Icons/paper.svg">
+                                <i>Export</i>
+                            </button>
                         </div>
+
                     </div>
                     <!-- list of orders -->
                     <div class="orders">
@@ -117,7 +127,7 @@
                                     <td>Karim Bdr</td>
                                     <td>2026/03/15</td>
                                     <td>1599$</td>
-                                    <td><span class="cash">Cash on Delivery</span></td>
+                                    <td><span class="cash">Cash </span></td>
                                     <td><span class="status active">Active </span></td>
                                     <td>
                                         <span class="actions">
@@ -143,9 +153,8 @@
                             </tbody>
                         </table>
                     </div>
-            </div>
-
-        </div>
+                </section>
+            </section>
     </body>
 </html>
 

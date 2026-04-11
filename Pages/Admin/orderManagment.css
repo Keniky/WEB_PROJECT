@@ -90,6 +90,7 @@ tbody tr:active{
     margin-left: var(--space-md);
     display: flex;
     flex-direction: row;
+    gap:var(--space-sm)
 }
 
 .utility-button button{
@@ -101,6 +102,7 @@ tbody tr:active{
     border: 2px solid var(--color-gray-500);
     padding-inline: var(--space-sm);
     border-radius: var(--radius-elg);
+    
 }
 
 .utility-button button:hover{

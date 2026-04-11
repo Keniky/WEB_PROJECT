@@ -19,14 +19,14 @@
     </head>
     <body>
         <div class="container">
-            <div class="side-bar">
+            <nav class="side-bar">
                 <div class="side-bar-upper">
                     <div>
                         <span class = "shop-logo"></span>
                     </div>
                     <label class="icon">
                         <input type="checkbox"/>
-                        <img src="../../Assets/Icons/menu.svg" class="icon">
+                        <img src="../../Assets/Icons/menu.svg" class="icon" alt="noImage">
                     </label>
                 </div>
                 <div class="side-bar-mid">
@@ -41,15 +41,15 @@
                     </a>
                     <a class="icon" href="orderManagment.html">
                         <img src="../../Assets/Icons/Bag.svg" class="icon">
-                        <i style="color:var(--color-primary)">Orders</i>
+                        <i>Orders</i>
                     </a>
                     <a class="icon" >
                         <img src="../../Assets/Icons/Review.svg" class="icon">
                         <i>Reviews</i>
                     </a>
-                    <a class="icon" href="userManagment.html">
+                    <a class="icon" href="./userManagment.html">
                         <span class="material-icons">person</span>
-                        <i>Customers</i>
+                        <i style="color:var(--color-primary)">Users</i>
                     </a>
                     <a class="icon">
                         <img src="../../Assets/Icons/Settings.svg" class="icon">
@@ -62,11 +62,11 @@
                         <i>log Out</i>
                     </label>
                 </button>
-            </div>
+            </nav>
             <!-- top bar right side -->
-            <div class="right-side">
+            <section class="right-side">
                 <!-- upper -->
-                <div class="top-bar">
+                <header class="top-bar">
 
                     <span class="notification">
                         <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,19 +84,21 @@
                         Boudaira Karim
                     </span>
 
-                </div>
+                </header>
                 <!-- lower -->
-                <div class="bottom-bar">
+                <section class="bottom-bar">
                     <div class="user-name">
-                        <label>Orders Managment</label>
+                        <label>User Managment</label>
                     </div>
                     <div class="utility">
 
                         <div class="utility-button">
+
                             <button>
                                 <img src="../../Assets/Icons/x.svg">
-                                <i>Cancel</i>
+                                <i>Delete</i>
                             </button>
+
                         </div>
                     </div>
                     <!-- list of orders -->
@@ -116,7 +118,7 @@
                                     <td>
                                         <span class="actions">
                                             <img src="../../Assets/Icons/Block.svg">
-                                            <img src="../../Assets/Icons/eye.png">
+                                            <img src="../../Assets/Icons/edit.png">
                                         </span>
                                     </td>
                                 </tr>
@@ -126,15 +128,15 @@
                                     <td>
                                         <span class="actions">
                                             <img src="../../Assets/Icons/Block.svg">
-                                            <img src="../../Assets/Icons/eye.png">
+                                            <img src="../../Assets/Icons/edit.png">
                                         </span>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-            </div>
-
+                </section>
+            </section>
         </div>
     </body>
 </html>

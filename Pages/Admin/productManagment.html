@@ -17,7 +17,7 @@
     </head>
     <body>
         <div class="container">
-            <div class="side-bar">
+            <nav class="side-bar">
                 <div class="side-bar-upper">
                     <div>
                         <span class = "shop-logo"></span>
@@ -37,7 +37,7 @@
                         <img src="../../Assets/Icons/List.svg" class="icon">
                         <i style="color:var(--color-primary)">Product Managment</i>
                     </a>
-                    <a class="icon" href="orderManagment.html">
+                    <a class="icon" href="./orderManagment.html">
                         <img src="../../Assets/Icons/Bag.svg" class="icon">
                         <i>Orders</i>
                     </a>
@@ -45,9 +45,9 @@
                         <img src="../../Assets/Icons/Review.svg" class="icon">
                         <i>Reviews</i>
                     </a>
-                    <a class="icon" href="userManagment.html">
+                    <a class="icon" href="./userManagment.html">
                         <span class="material-icons">person</span>
-                        <i>Customers</i>
+                        <i>Users</i>
                     </a>
                     <a class="icon">
                         <img src="../../Assets/Icons/Settings.svg" class="icon">
@@ -60,11 +60,11 @@
                         <i>log Out</i>
                     </label>
                 </button>
-            </div>
+            </nav>
             <!-- top bar right side -->
-            <div class="right-side">
+            <section class="right-side">
                 <!-- upper -->
-                <div class="top-bar">
+                <header class="top-bar">
 
                     <span class="notification">
                         <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -82,12 +82,14 @@
                         Boudaira Karim
                     </span>
 
-                </div>
+                </header>
                 <!-- lower -->
                 <div class="bottom-bar">
+                    
                     <div class="user-name">
                         <label>Product Managment</label>
                     </div>
+
                     <div class="inline-display">
                         <label class="tab-bar">
                             <a href="productManagment.html">
@@ -102,14 +104,16 @@
                             </a>
                         </label>
                     </div>
-
+                    
                     <div class="utility">
 
                         <div class="utility-button">
-                            <button>
-                                <img src="../../Assets/Icons/Check.svg">
-                                <i>Add</i>
-                            </button>
+                            <a href="productManagmentAdd.html">
+                                <button id="add-button">
+                                    <img src="../../Assets/Icons/Check.svg">
+                                    <i>Add</i>
+                                </button>
+                            </a>
                             <button>
                                 <img src="../../Assets/Icons/tool.svg">
                                 <i>Edit</i>
@@ -137,7 +141,8 @@
                     <!-- list of products -->
                     <div class="devices">
                         <div class="device">
-                            <span>Name
+                            <span>
+                                Name
                                 <img src="../../Assets/Icons/arrow-down.svg" width="10px" height="10px">
                             </span>
                             <span>Brand</span>
@@ -171,10 +176,11 @@
                                 <img src="../../Assets/Icons/delete.png">
                             </span>
                         </div>
-                    </div>
-            </div>
 
-        </div>
+                    </div>
+
+            </section>
     </body>
+    
 </html>
 
