@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Page</title>
+
+  <link rel="stylesheet" href="search_page.css" />
+  <link rel="stylesheet" href="../../../Components/Shared/buttons.css">
+  <link rel="stylesheet" href="../../../Components/Shared/iconbuttons.css">
+  <link rel="stylesheet" href="../../../Components/Customer/navbar/navbar.css">
+  <link rel="stylesheet" href="../../../Components/Customer/footer/footer.css">
+  <link rel="stylesheet" href="../../../Components/Customer/product_cards/product_item_large/product_item_large.css">
+  <link rel="stylesheet" href="../../../Components/Customer/categories_section/categories_section.css">
+  <link rel="stylesheet" href="../../../Components/Customer/product_cards/product_item/product_item.css">
+  <link rel="stylesheet" href="../../../Components/Customer/product_cards/product_item_small/product_item_small.css">
+  <link rel="stylesheet" href="../../../Design_System/CSS/variables.css">
+  <link rel="stylesheet" href="../../../Design_System/CSS/fonts.css">
+
+</head>
+
+<body>
+  <!-- Header (Navigation)-->
+
+  <header class="navbar">
+
+    <!-- Top Bar -->
+    <div class="navbar-top">
+      <p>Welcome to ShopPal online eCommerce store.</p>
+
+      <div class="navbar-social">
+        <span>Join Us:</span>
+        <a href="#"><img src="../../../Assets/Icons/Facebook.svg" class="icon"></a>
+        <a href="#"><img src="../../../Assets/Icons/Twitter.svg" class="icon"></a>
+        <a href="#"><img src="../../../Assets/Icons/Instagram.svg" class="icon"></a>
+      </div>
+    </div>
+
+    <!-- Main Bar -->
+    <div class="navbar-main">
+
+      <!-- Logo -->
+      <div class="navbar-logo">
+        <img src="../../../Assets/Images/ShopPal-Logo.png" alt="ShopPal">
+      </div>
+
+      <!-- Search -->
+      <div class="navbar-search">
+        <select class="search-category">
+          <option>All Items</option>
+          <option>Phones</option>
+        </select>
+
+        <input type="text" placeholder="Search">
+
+        <button class="search-btn">
+          <img src="../../../Assets/Icons/Search.svg" class="icon">
+        </button>
+      </div>
+
+      <!-- Actions -->
+      <div class="navbar-actions">
+        <a href="#"><img src="../../../Assets/Icons/shopping-cart.svg" class="icon"></a>
+        <a href="#"><img src="../../../Assets/Icons/heart.svg" class="icon"></a>
+        <a href="#"><img src="../../../Assets/Icons/user.svg" class="icon"></a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="navbar-toggle"><img src="../../../Assets/Icons/menu.svg" class="icon"></div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="navbar-bottom">
+      <div class="category-btn">
+        <span>All Categories</span>
+        <img src="../../../Assets/Icons/chevron-down.svg" class="icon">
+      </div>
+      <div class="support">
+        <img src="../../../Assets/Icons/Headset.svg" class="icon">
+        <span>Support</span>
+      </div>
+    </div>
+
+  </header>
+
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="filter-box">
+        <h3>Categories:</h3>
+
+        <div class="checkbox-group">
+          <label><input type="checkbox"> Category 1</label>
+          <label><input type="checkbox"> Category 2</label>
+          <label><input type="checkbox"> Category 3</label>
+          <label><input type="checkbox"> Category 4</label>
+          <label><input type="checkbox"> Category 5</label>
+          <label><input type="checkbox"> Category 6</label>
+          <label><input type="checkbox"> Category 7</label>
+          <label><input type="checkbox"> Category 8</label>
+        </div>
+      </div>
+
+      <div class="filter-box">
+        <h3>Brands:</h3>
+
+        <div class="checkbox-group">
+          <label><input type="checkbox"> Brand 1</label>
+          <label><input type="checkbox"> Brand 2</label>
+          <label><input type="checkbox"> Brand 3</label>
+          <label><input type="checkbox"> Brand 4</label>
+          <label><input type="checkbox"> Brand 5</label>
+        </div>
+      </div>
+
+      <div class="price-filter">
+        <h3>Price Range:</h3>
+
+
+        <div class="price-inputs">
+          <input type="number" placeholder="Min">
+          <input type="number" placeholder="Max">
+        </div>
+      </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+      <!-- TOP BAR -->
+      <div class="top-bar">
+
+        <div class="sort">
+          <span>Sort By:</span>
+          <select>
+            <option>Most Relevant</option>
+            <option>Price Low</option>
+            <option>Price High</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- ACTIVE FILTERS -->
+      <div class="active-filters">
+        <div>
+          <span>Active Filters:</span>
+          <span class="tag">Price ×</span>
+        </div>
+
+        <div>123 Results found.</div>
+      </div>
+
+      <!-- PRODUCTS GRID -->
+      <div class="products">
+
+        <!-- Replace with your card -->
+        <div class="product_card_item">
+          <div class="top">
+            <div class="card-image"></div>
+            <img class="card-heart" src="../../../Assets/Icons/heart.svg" />
+          </div>
+          <div class="buttom">
+            <div class="card-content">
+              <h3 class="card-title">Put the name of your product here and don’t forget it has a limit..</h3>
+              <div class="card-price">
+                <span class="price-new">$12.99</span>
+                <span class="price-old">$15.99</span>
+              </div>
+              <div class="card-rating">
+                <span class="stars">★★★☆☆</span>
+                <span class="reviews">(2k)</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="btn-enabled icon-btn  icon-btn-secondary" style="height: 30px; width: 30px;">
+                <img src="../../../Assets/Icons/shopping-cart.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_card_item">
+          <div class="top">
+            <div class="card-image"></div>
+            <img class="card-heart" src="../../../Assets/Icons/heart.svg" />
+          </div>
+          <div class="buttom">
+            <div class="card-content">
+              <h3 class="card-title">Put the name of your product here and don’t forget it has a limit..</h3>
+              <div class="card-price">
+                <span class="price-new">$12.99</span>
+                <span class="price-old">$15.99</span>
+              </div>
+              <div class="card-rating">
+                <span class="stars">★★★☆☆</span>
+                <span class="reviews">(2k)</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="btn-enabled icon-btn  icon-btn-secondary" style="height: 30px; width: 30px;">
+                <img src="../../../Assets/Icons/shopping-cart.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_card_item">
+          <div class="top">
+            <div class="card-image"></div>
+            <img class="card-heart" src="../../../Assets/Icons/heart.svg" />
+          </div>
+          <div class="buttom">
+            <div class="card-content">
+              <h3 class="card-title">Put the name of your product here and don’t forget it has a limit..</h3>
+              <div class="card-price">
+                <span class="price-new">$12.99</span>
+                <span class="price-old">$15.99</span>
+              </div>
+              <div class="card-rating">
+                <span class="stars">★★★☆☆</span>
+                <span class="reviews">(2k)</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="btn-enabled icon-btn  icon-btn-secondary" style="height: 30px; width: 30px;">
+                <img src="../../../Assets/Icons/shopping-cart.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_card_item">
+          <div class="top">
+            <div class="card-image"></div>
+            <img class="card-heart" src="../../../Assets/Icons/heart.svg" />
+          </div>
+          <div class="buttom">
+            <div class="card-content">
+              <h3 class="card-title">Put the name of your product here and don’t forget it has a limit..</h3>
+              <div class="card-price">
+                <span class="price-new">$12.99</span>
+                <span class="price-old">$15.99</span>
+              </div>
+              <div class="card-rating">
+                <span class="stars">★★★☆☆</span>
+                <span class="reviews">(2k)</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="btn-enabled icon-btn  icon-btn-secondary" style="height: 30px; width: 30px;">
+                <img src="../../../Assets/Icons/shopping-cart.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_card_item">
+          <div class="top">
+            <div class="card-image"></div>
+            <img class="card-heart" src="../../../Assets/Icons/heart.svg" />
+          </div>
+          <div class="buttom">
+            <div class="card-content">
+              <h3 class="card-title">Put the name of your product here and don’t forget it has a limit..</h3>
+              <div class="card-price">
+                <span class="price-new">$12.99</span>
+                <span class="price-old">$15.99</span>
+              </div>
+              <div class="card-rating">
+                <span class="stars">★★★☆☆</span>
+                <span class="reviews">(2k)</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="btn-enabled icon-btn  icon-btn-secondary" style="height: 30px; width: 30px;">
+                <img src="../../../Assets/Icons/shopping-cart.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product_card_item">
+          <div class="top">
+            <div class="card-image"></div>
+            <img class="card-heart" src="../../../Assets/Icons/heart.svg" />
+          </div>
+          <div class="buttom">
+            <div class="card-content">
+              <h3 class="card-title">Put the name of your product here and don’t forget it has a limit..</h3>
+              <div class="card-price">
+                <span class="price-new">$12.99</span>
+                <span class="price-old">$15.99</span>
+              </div>
+              <div class="card-rating">
+                <span class="stars">★★★☆☆</span>
+                <span class="reviews">(2k)</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="btn-enabled icon-btn  icon-btn-secondary" style="height: 30px; width: 30px;">
+                <img src="../../../Assets/Icons/shopping-cart.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_card_item">
+          <div class="top">
+            <div class="card-image"></div>
+            <img class="card-heart" src="../../../Assets/Icons/heart.svg" />
+          </div>
+          <div class="buttom">
+            <div class="card-content">
+              <h3 class="card-title">Put the name of your product here and don’t forget it has a limit..</h3>
+              <div class="card-price">
+                <span class="price-new">$12.99</span>
+                <span class="price-old">$15.99</span>
+              </div>
+              <div class="card-rating">
+                <span class="stars">★★★☆☆</span>
+                <span class="reviews">(2k)</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="btn-enabled icon-btn  icon-btn-secondary" style="height: 30px; width: 30px;">
+                <img src="../../../Assets/Icons/shopping-cart.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_card_item">
+          <div class="top">
+            <div class="card-image"></div>
+            <img class="card-heart" src="../../../Assets/Icons/heart.svg" />
+          </div>
+          <div class="buttom">
+            <div class="card-content">
+              <h3 class="card-title">Put the name of your product here and don’t forget it has a limit..</h3>
+              <div class="card-price">
+                <span class="price-new">$12.99</span>
+                <span class="price-old">$15.99</span>
+              </div>
+              <div class="card-rating">
+                <span class="stars">★★★☆☆</span>
+                <span class="reviews">(2k)</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="btn-enabled icon-btn  icon-btn-secondary" style="height: 30px; width: 30px;">
+                <img src="../../../Assets/Icons/shopping-cart.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_card_item">
+          <div class="top">
+            <div class="card-image"></div>
+            <img class="card-heart" src="../../../Assets/Icons/heart.svg" />
+          </div>
+          <div class="buttom">
+            <div class="card-content">
+              <h3 class="card-title">Put the name of your product here and don’t forget it has a limit..</h3>
+              <div class="card-price">
+                <span class="price-new">$12.99</span>
+                <span class="price-old">$15.99</span>
+              </div>
+              <div class="card-rating">
+                <span class="stars">★★★☆☆</span>
+                <span class="reviews">(2k)</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="btn-enabled icon-btn  icon-btn-secondary" style="height: 30px; width: 30px;">
+                <img src="../../../Assets/Icons/shopping-cart.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_card_item">
+          <div class="top">
+            <div class="card-image"></div>
+            <img class="card-heart" src="../../../Assets/Icons/heart.svg" />
+          </div>
+          <div class="buttom">
+            <div class="card-content">
+              <h3 class="card-title">Put the name of your product here and don’t forget it has a limit..</h3>
+              <div class="card-price">
+                <span class="price-new">$12.99</span>
+                <span class="price-old">$15.99</span>
+              </div>
+              <div class="card-rating">
+                <span class="stars">★★★☆☆</span>
+                <span class="reviews">(2k)</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="btn-enabled icon-btn  icon-btn-secondary" style="height: 30px; width: 30px;">
+                <img src="../../../Assets/Icons/shopping-cart.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product_card_item">
+          <div class="top">
+            <div class="card-image"></div>
+            <img class="card-heart" src="../../../Assets/Icons/heart.svg" />
+          </div>
+          <div class="buttom">
+            <div class="card-content">
+              <h3 class="card-title">Put the name of your product here and don’t forget it has a limit..</h3>
+              <div class="card-price">
+                <span class="price-new">$12.99</span>
+                <span class="price-old">$15.99</span>
+              </div>
+              <div class="card-rating">
+                <span class="stars">★★★☆☆</span>
+                <span class="reviews">(2k)</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="btn-enabled icon-btn  icon-btn-secondary" style="height: 30px; width: 30px;">
+                <img src="../../../Assets/Icons/shopping-cart.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product_card_item">
+          <div class="top">
+            <div class="card-image"></div>
+            <img class="card-heart" src="../../../Assets/Icons/heart.svg" />
+          </div>
+          <div class="buttom">
+            <div class="card-content">
+              <h3 class="card-title">Put the name of your product here and don’t forget it has a limit..</h3>
+              <div class="card-price">
+                <span class="price-new">$12.99</span>
+                <span class="price-old">$15.99</span>
+              </div>
+              <div class="card-rating">
+                <span class="stars">★★★☆☆</span>
+                <span class="reviews">(2k)</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="btn-enabled icon-btn  icon-btn-secondary" style="height: 30px; width: 30px;">
+                <img src="../../../Assets/Icons/shopping-cart.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_card_item">
+          <div class="top">
+            <div class="card-image"></div>
+            <img class="card-heart" src="../../../Assets/Icons/heart.svg" />
+          </div>
+          <div class="buttom">
+            <div class="card-content">
+              <h3 class="card-title">Put the name of your product here and don’t forget it has a limit..</h3>
+              <div class="card-price">
+                <span class="price-new">$12.99</span>
+                <span class="price-old">$15.99</span>
+              </div>
+              <div class="card-rating">
+                <span class="stars">★★★☆☆</span>
+                <span class="reviews">(2k)</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="btn-enabled icon-btn  icon-btn-secondary" style="height: 30px; width: 30px;">
+                <img src="../../../Assets/Icons/shopping-cart.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_card_item">
+          <div class="top">
+            <div class="card-image"></div>
+            <img class="card-heart" src="../../../Assets/Icons/heart.svg" />
+          </div>
+          <div class="buttom">
+            <div class="card-content">
+              <h3 class="card-title">Put the name of your product here and don’t forget it has a limit..</h3>
+              <div class="card-price">
+                <span class="price-new">$12.99</span>
+                <span class="price-old">$15.99</span>
+              </div>
+              <div class="card-rating">
+                <span class="stars">★★★☆☆</span>
+                <span class="reviews">(2k)</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="btn-enabled icon-btn  icon-btn-secondary" style="height: 30px; width: 30px;">
+                <img src="../../../Assets/Icons/shopping-cart.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_card_item">
+          <div class="top">
+            <div class="card-image"></div>
+            <img class="card-heart" src="../../../Assets/Icons/heart.svg" />
+          </div>
+          <div class="buttom">
+            <div class="card-content">
+              <h3 class="card-title">Put the name of your product here and don’t forget it has a limit..</h3>
+              <div class="card-price">
+                <span class="price-new">$12.99</span>
+                <span class="price-old">$15.99</span>
+              </div>
+              <div class="card-rating">
+                <span class="stars">★★★☆☆</span>
+                <span class="reviews">(2k)</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="btn-enabled icon-btn  icon-btn-secondary" style="height: 30px; width: 30px;">
+                <img src="../../../Assets/Icons/shopping-cart.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="product_card_item">
+          <div class="top">
+            <div class="card-image"></div>
+            <img class="card-heart" src="../../../Assets/Icons/heart.svg" />
+          </div>
+          <div class="buttom">
+            <div class="card-content">
+              <h3 class="card-title">Put the name of your product here and don’t forget it has a limit..</h3>
+              <div class="card-price">
+                <span class="price-new">$12.99</span>
+                <span class="price-old">$15.99</span>
+              </div>
+              <div class="card-rating">
+                <span class="stars">★★★☆☆</span>
+                <span class="reviews">(2k)</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="btn-enabled icon-btn  icon-btn-secondary" style="height: 30px; width: 30px;">
+                <img src="../../../Assets/Icons/shopping-cart.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_card_item">
+          <div class="top">
+            <div class="card-image"></div>
+            <img class="card-heart" src="../../../Assets/Icons/heart.svg" />
+          </div>
+          <div class="buttom">
+            <div class="card-content">
+              <h3 class="card-title">Put the name of your product here and don’t forget it has a limit..</h3>
+              <div class="card-price">
+                <span class="price-new">$12.99</span>
+                <span class="price-old">$15.99</span>
+              </div>
+              <div class="card-rating">
+                <span class="stars">★★★☆☆</span>
+                <span class="reviews">(2k)</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="btn-enabled icon-btn  icon-btn-secondary" style="height: 30px; width: 30px;">
+                <img src="../../../Assets/Icons/shopping-cart.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_card_item">
+          <div class="top">
+            <div class="card-image"></div>
+            <img class="card-heart" src="../../../Assets/Icons/heart.svg" />
+          </div>
+          <div class="buttom">
+            <div class="card-content">
+              <h3 class="card-title">Put the name of your product here and don’t forget it has a limit..</h3>
+              <div class="card-price">
+                <span class="price-new">$12.99</span>
+                <span class="price-old">$15.99</span>
+              </div>
+              <div class="card-rating">
+                <span class="stars">★★★☆☆</span>
+                <span class="reviews">(2k)</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="btn-enabled icon-btn  icon-btn-secondary" style="height: 30px; width: 30px;">
+                <img src="../../../Assets/Icons/shopping-cart.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_card_item">
+          <div class="top">
+            <div class="card-image"></div>
+            <img class="card-heart" src="../../../Assets/Icons/heart.svg" />
+          </div>
+          <div class="buttom">
+            <div class="card-content">
+              <h3 class="card-title">Put the name of your product here and don’t forget it has a limit..</h3>
+              <div class="card-price">
+                <span class="price-new">$12.99</span>
+                <span class="price-old">$15.99</span>
+              </div>
+              <div class="card-rating">
+                <span class="stars">★★★☆☆</span>
+                <span class="reviews">(2k)</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="btn-enabled icon-btn  icon-btn-secondary" style="height: 30px; width: 30px;">
+                <img src="../../../Assets/Icons/shopping-cart.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_card_item">
+          <div class="top">
+            <div class="card-image"></div>
+            <img class="card-heart" src="../../../Assets/Icons/heart.svg" />
+          </div>
+          <div class="buttom">
+            <div class="card-content">
+              <h3 class="card-title">Put the name of your product here and don’t forget it has a limit..</h3>
+              <div class="card-price">
+                <span class="price-new">$12.99</span>
+                <span class="price-old">$15.99</span>
+              </div>
+              <div class="card-rating">
+                <span class="stars">★★★☆☆</span>
+                <span class="reviews">(2k)</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <div class="btn-enabled icon-btn  icon-btn-secondary" style="height: 30px; width: 30px;">
+                <img src="../../../Assets/Icons/shopping-cart.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PAGINATION -->
+      <div class="pagination">
+        <button>&lt;</button>
+        <button class="active">01</button>
+        <button>02</button>
+        <button>03</button>
+        <button>&gt;</button>
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Footer -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+
+      <div class="footer-logo">
+        <img src="../../../Assets/Images/ShopPal-Logo.png" alt="ShopPal">
+      </div>
+
+      <div class="footer-columns">
+
+        <!-- Column 1 - Shop -->
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <a href="#">All Products</a>
+          <a href="#">New Arrivals</a>
+          <a href="#">Best Sellers</a>
+          <a href="#">Gift Ideas</a>
+        </div>
+
+        <!-- Column 2 - Customer Service -->
+        <div class="footer-col">
+          <h4>Customer Service</h4>
+          <a href="#">Contact Us</a>
+          <a href="#">FAQs</a>
+          <a href="#">Shipping & Returns</a>
+        </div>
+
+        <!-- Column 3 - About -->
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="#">About Us</a>
+          <a href="#">Our Story</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+        </div>
+
+        <!-- Column 4 - Join Us (Social)-->
+        <div class="footer-col">
+          <h4>Join Us</h4>
+          <div class="footer-social">
+            <img src="../../../assets/icons/facebook.svg" class="icon">
+            <img src="../../../assets/icons/twitter.svg" class="icon">
+            <img src="../../../assets/icons/instagram.svg" class="icon">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>ShopPal © 2026. All rights reserved.</p>
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
