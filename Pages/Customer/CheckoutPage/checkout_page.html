@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="checkout_page.css" />
+  <link rel="stylesheet" href="../../../Components/Shared/buttons.css">
+  <link rel="stylesheet" href="../../../Components/Shared/iconbuttons.css">
+  <link rel="stylesheet" href="../../../Components/Customer/navbar/navbar.css">
+  <link rel="stylesheet" href="../../../Components/Customer/footer/footer.css">
+  <link rel="stylesheet" href="../../../Components/Customer/product_cards/product_item_large/product_item_large.css">
+  <link rel="stylesheet" href="../../../Components/Customer/categories_section/categories_section.css">
+  <link rel="stylesheet" href="../../../Components/Customer/product_cards/product_item/product_item.css">
+  <link rel="stylesheet" href="../../../Components/Customer/product_cards/product_item_small/product_item_small.css">
+  <link rel="stylesheet" href="../../../Design_System/CSS/variables.css">
+  <link rel="stylesheet" href="../../../Design_System/CSS/fonts.css">
+
+
+</head>
+
+<body>
+
+  <!-- Header (Navigation)-->
+
+  <header class="navbar">
+
+    <!-- Top Bar -->
+    <div class="navbar-top">
+      <p>Welcome to ShopPal online eCommerce store.</p>
+
+      <div class="navbar-social">
+        <span>Join Us:</span>
+        <a href="#"><img src="../../../Assets/Icons/Facebook.svg" class="icon"></a>
+        <a href="#"><img src="../../../Assets/Icons/Twitter.svg" class="icon"></a>
+        <a href="#"><img src="../../../Assets/Icons/Instagram.svg" class="icon"></a>
+      </div>
+    </div>
+
+    <!-- Main Bar -->
+    <div class="navbar-main">
+
+      <!-- Logo -->
+      <div class="navbar-logo">
+        <img src="../../../Assets/Images/ShopPal-Logo.png" alt="ShopPal">
+      </div>
+
+      <!-- Search -->
+      <div class="navbar-search">
+        <select class="search-category">
+          <option>All Items</option>
+          <option>Phones</option>
+        </select>
+
+        <input type="text" placeholder="Search">
+
+        <button class="search-btn">
+          <img src="../../../Assets/Icons/Search.svg" class="icon">
+        </button>
+      </div>
+
+      <!-- Actions -->
+      <div class="navbar-actions">
+        <a href="#"><img src="../../../Assets/Icons/shopping-cart.svg" class="icon"></a>
+        <a href="#"><img src="../../../Assets/Icons/heart.svg" class="icon"></a>
+        <a href="#"><img src="../../../Assets/Icons/user.svg" class="icon"></a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="navbar-toggle"><img src="../../../Assets/Icons/menu.svg" class="icon"></div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="navbar-bottom">
+      <div class="category-btn">
+        <span>All Categories</span>
+        <img src="../../../Assets/Icons/chevron-down.svg" class="icon">
+      </div>
+      <div class="support">
+        <img src="../../../Assets/Icons/Headset.svg" class="icon">
+        <span>Support</span>
+      </div>
+    </div>
+
+  </header>
+
+  <div class="container">
+
+    <div class="path">
+      Home / User Profile / Shopping Cart / Checkout
+    </div>
+
+    <div class="main">
+
+      <!-- LEFT -->
+      <div class="left">
+
+        <div class="section">
+          <h2>Billing Information</h2>
+          <div class="divider"></div>
+
+          <div class="row">
+            <div class="input-group">
+              <label>First Name</label>
+              <input type="text">
+            </div>
+            <div class="input-group">
+              <label>Last Name</label>
+              <input type="text">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-group">
+              <label>Email</label>
+              <input type="email">
+            </div>
+            <div class="input-group">
+              <label>Phone Number</label>
+              <input type="text">
+            </div>
+          </div>
+
+          <div class="checkbox">
+            <input type="checkbox"> Ship into different address
+          </div>
+
+          <div class="row">
+            <div class="input-group">
+              <label>Country</label>
+              <select>
+                <option>Algeria</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>Region/State</label>
+              <input type="text">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-group">
+              <label>City</label>
+              <input type="text">
+            </div>
+            <div class="input-group">
+              <label>Zip Code</label>
+              <input type="text">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-group">
+              <label>Address</label>
+              <input type="text">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="section">
+          <h2>Payment Option</h2>
+          <div class="divider"></div>
+
+          <div class="payment">
+            <div>Credit Card</div>
+            <div class="active">Cash on Delivery</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Additional Details</h2>
+          <div class="divider"></div>
+
+          <div class="input-group">
+            <label>Order notes (optional)</label>
+            <textarea></textarea>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="right">
+        <div class="summary">
+          <h2>Order Summary</h2>
+
+          <div class="product">
+            <img src="https://via.placeholder.com/60">
+            <div class="product-info">
+              Product Name<br>
+              2 × <span class="price">$23</span>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="https://via.placeholder.com/60">
+            <div class="product-info">
+              Product Name<br>
+              2 × <span class="price">$23</span>
+            </div>
+          </div>
+
+          <div class="totals">
+            <div><span>Sub-Total:</span><span>$129</span></div>
+            <div><span>Shipping:</span><span>$12</span></div>
+            <hr>
+            <div class="total"><span>Total:</span><span>$141</span></div>
+          </div>
+
+          <button class="btn">Place Order →</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Footer -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+
+      <div class="footer-logo">
+        <img src="../../../Assets/Images/ShopPal-Logo.png" alt="ShopPal">
+      </div>
+
+      <div class="footer-columns">
+
+        <!-- Column 1 - Shop -->
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <a href="#">All Products</a>
+          <a href="#">New Arrivals</a>
+          <a href="#">Best Sellers</a>
+          <a href="#">Gift Ideas</a>
+        </div>
+
+        <!-- Column 2 - Customer Service -->
+        <div class="footer-col">
+          <h4>Customer Service</h4>
+          <a href="#">Contact Us</a>
+          <a href="#">FAQs</a>
+          <a href="#">Shipping & Returns</a>
+        </div>
+
+        <!-- Column 3 - About -->
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="#">About Us</a>
+          <a href="#">Our Story</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+        </div>
+
+        <!-- Column 4 - Join Us (Social)-->
+        <div class="footer-col">
+          <h4>Join Us</h4>
+          <div class="footer-social">
+            <img src="../../../assets/icons/facebook.svg" class="icon">
+            <img src="../../../assets/icons/twitter.svg" class="icon">
+            <img src="../../../assets/icons/instagram.svg" class="icon">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>ShopPal © 2026. All rights reserved.</p>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
