@@ -40,22 +40,27 @@
     <div class="navbar-main">
 
       <!-- Logo -->
-      <div class="navbar-logo">
+      <a href="../HomePage/index.html" class="navbar-logo navbar-logo-link">
         <img src="../../../Assets/Images/ShopPal-Logo.png" alt="ShopPal">
-      </div>
+      </a>
 
       <!-- Search -->
       <div class="navbar-search">
         <select class="search-category">
-          <option>All Items</option>
-          <option>Phones</option>
+          <option>All Tech</option>
+          <option>Smartphones</option>
+          <option>Laptops</option>
+          <option>Tablets</option>
+          <option>PC Components</option>
+          <option>Monitors</option>
+          <option>Accessories</option>
         </select>
 
-        <input type="text" placeholder="Search">
+        <input type="text" placeholder="Search tech products">
 
-        <button class="search-btn">
+        <a href="search_page.html" class="search-btn">
           <img src="../../../Assets/Icons/Search.svg" class="icon">
-        </button>
+        </a>
       </div>
 
       <!-- Actions -->
@@ -72,10 +77,10 @@
 
     <!-- Bottom Bar -->
     <div class="navbar-bottom">
-      <div class="category-btn">
-        <span>All Categories</span>
+      <a href="search_page.html" class="category-btn category-btn-link">
+        <span>Tech Categories</span>
         <img src="../../../Assets/Icons/chevron-down.svg" class="icon">
-      </div>
+      </a>
       <div class="support">
         <img src="../../../Assets/Icons/Headset.svg" class="icon">
         <span>Support</span>
@@ -93,14 +98,14 @@
         <h3>Categories:</h3>
 
         <div class="checkbox-group">
-          <label><input type="checkbox"> Category 1</label>
-          <label><input type="checkbox"> Category 2</label>
-          <label><input type="checkbox"> Category 3</label>
-          <label><input type="checkbox"> Category 4</label>
-          <label><input type="checkbox"> Category 5</label>
-          <label><input type="checkbox"> Category 6</label>
-          <label><input type="checkbox"> Category 7</label>
-          <label><input type="checkbox"> Category 8</label>
+          <label><input type="checkbox"> Smartphones</label>
+          <label><input type="checkbox"> Laptops</label>
+          <label><input type="checkbox"> Tablets</label>
+          <label><input type="checkbox"> Desktop PCs</label>
+          <label><input type="checkbox"> Monitors</label>
+          <label><input type="checkbox"> PC Components</label>
+          <label><input type="checkbox"> Peripherals</label>
+          <label><input type="checkbox"> Accessories</label>
         </div>
       </div>
 
@@ -108,11 +113,36 @@
         <h3>Brands:</h3>
 
         <div class="checkbox-group">
-          <label><input type="checkbox"> Brand 1</label>
-          <label><input type="checkbox"> Brand 2</label>
-          <label><input type="checkbox"> Brand 3</label>
-          <label><input type="checkbox"> Brand 4</label>
-          <label><input type="checkbox"> Brand 5</label>
+          <label><input type="checkbox"> Apple</label>
+          <label><input type="checkbox"> Samsung</label>
+          <label><input type="checkbox"> Dell</label>
+          <label><input type="checkbox"> HP</label>
+          <label><input type="checkbox"> Lenovo</label>
+          <label><input type="checkbox"> ASUS</label>
+          <label><input type="checkbox"> Acer</label>
+          <label><input type="checkbox"> MSI</label>
+        </div>
+      </div>
+
+      <div class="filter-box">
+        <h3>Condition:</h3>
+
+        <div class="checkbox-group">
+          <label><input type="checkbox"> New</label>
+          <label><input type="checkbox"> Open Box</label>
+          <label><input type="checkbox"> Refurbished</label>
+        </div>
+      </div>
+
+      <div class="filter-box">
+        <h3>Specs:</h3>
+
+        <div class="checkbox-group">
+          <label><input type="checkbox"> 8GB RAM+</label>
+          <label><input type="checkbox"> 256GB Storage+</label>
+          <label><input type="checkbox"> 13-inch+</label>
+          <label><input type="checkbox"> 15-inch+</label>
+          <label><input type="checkbox"> Wi-Fi 6</label>
         </div>
       </div>
 
@@ -149,14 +179,14 @@
       <div class="active-filters">
         <div>
           <span>Active Filters:</span>
-          <span class="tag">Price ×</span>
+          <span class="tag">Tech ×</span>
         </div>
 
         <div>123 Results found.</div>
       </div>
 
       <!-- PRODUCTS GRID -->
-      <div class="products">
+      <a href="../ProductDetailsPage/product_details.html" class="products product-grid-link">
 
         <!-- Replace with your card -->
         <div class="product_card_item">
@@ -647,18 +677,19 @@
           </div>
         </div>
 
-      </div>
+  </div>
+  </a>
 
-      <!-- PAGINATION -->
-      <div class="pagination">
-        <button>&lt;</button>
-        <button class="active">01</button>
-        <button>02</button>
-        <button>03</button>
-        <button>&gt;</button>
-      </div>
+  <!-- PAGINATION -->
+  <div class="pagination">
+    <button>&lt;</button>
+    <button class="active">01</button>
+    <button>02</button>
+    <button>03</button>
+    <button>&gt;</button>
+  </div>
 
-    </main>
+  </main>
 
   </div>
 

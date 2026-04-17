@@ -1,11 +1,12 @@
 .categories-list {
   display: flex;
-  width: 1320px;
-  height: 190px;
-  justify-content: flex-end;
+  width: 100%;
+  max-width: 1320px;
+  min-height: 190px;
+  justify-content: center;
   align-items: flex-start;
-  gap: 40px;
-  overflow: hidden;
+  gap: 28px;
+  flex-wrap: wrap;
 }
 
 .category-element {
@@ -17,6 +18,11 @@
   gap: 20px;
 }
 
+.category-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .category-element .category-image {
   width: 101px;
   height: 100px;
@@ -25,7 +31,8 @@
   background-size: cover;
   background-position: center;
 
-  background-color: rgb(90, 97, 95);
+  background-color: #1A73E8;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.2);
 }
 
 .category-element .category-name {

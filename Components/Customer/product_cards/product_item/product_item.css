@@ -14,6 +14,11 @@
 
 }
 
+.product-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 .product_card_item:hover {
   background: var(--color-gray-300);

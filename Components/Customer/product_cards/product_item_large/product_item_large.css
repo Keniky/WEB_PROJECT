@@ -13,6 +13,12 @@
   border: solid 2px #E0E0E0;
 }
 
+.product-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
 .product-item-large:hover {
   background: var(--color-gray-300);
 }
