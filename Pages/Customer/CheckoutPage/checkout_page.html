@@ -21,202 +21,245 @@
 
 <body>
 
-  <!-- Header (Navigation)-->
+  <form class="checkout-form" id="checkout-form" novalidate>
 
-  <header class="navbar">
+    <!-- Header (Navigation)-->
 
-    <!-- Top Bar -->
-    <div class="navbar-top">
-      <p>Welcome to ShopPal online eCommerce store.</p>
+    <header class="navbar">
 
-      <div class="navbar-social">
-        <span>Join Us:</span>
-        <a href="#"><img src="../../../Assets/Icons/Facebook.svg" class="icon"></a>
-        <a href="#"><img src="../../../Assets/Icons/Twitter.svg" class="icon"></a>
-        <a href="#"><img src="../../../Assets/Icons/Instagram.svg" class="icon"></a>
+      <!-- Top Bar -->
+      <div class="navbar-top">
+        <p>Welcome to ShopPal online eCommerce store.</p>
+
+        <div class="navbar-social">
+          <span>Join Us:</span>
+          <a href="#"><img src="../../../Assets/Icons/Facebook.svg" class="icon"></a>
+          <a href="#"><img src="../../../Assets/Icons/Twitter.svg" class="icon"></a>
+          <a href="#"><img src="../../../Assets/Icons/Instagram.svg" class="icon"></a>
+        </div>
       </div>
-    </div>
 
-    <!-- Main Bar -->
-    <div class="navbar-main">
+      <!-- Main Bar -->
+      <div class="navbar-main">
 
-      <!-- Logo -->
-      <a href="../HomePage/index.html" class="navbar-logo navbar-logo-link">
-        <img src="../../../Assets/Images/ShopPal-Logo.png" alt="ShopPal">
-      </a>
-
-      <!-- Search -->
-      <div class="navbar-search">
-        <select class="search-category">
-          <option>All Items</option>
-          <option>Phones</option>
-        </select>
-
-        <input type="text" placeholder="Search">
-
-        <a href="../SearchPage/search_page.html" class="search-btn">
-          <img src="../../../Assets/Icons/Search.svg" class="icon">
+        <!-- Logo -->
+        <a href="../HomePage/index.html" class="navbar-logo navbar-logo-link">
+          <img src="../../../Assets/Images/ShopPal-Logo.png" alt="ShopPal">
         </a>
+
+        <!-- Search -->
+        <div class="navbar-search">
+          <select class="search-category">
+            <option>All Items</option>
+            <option>Phones</option>
+          </select>
+
+          <input type="text" placeholder="Search">
+
+          <a href="../SearchPage/search_page.html" class="search-btn">
+            <img src="../../../Assets/Icons/Search.svg" class="icon">
+          </a>
+        </div>
+
+        <!-- Actions -->
+        <div class="navbar-actions">
+          <a href="../ShoppingCartPage/shopping_cart_page.html"><img src="../../../Assets/Icons/shopping-cart.svg"
+              class="icon"></a>
+          <a href="#"><img src="../../../Assets/Icons/heart.svg" class="icon"></a>
+          <a href="#"><img src="../../../Assets/Icons/user.svg" class="icon"></a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="navbar-toggle"><img src="../../../Assets/Icons/menu.svg" class="icon"></div>
+
       </div>
 
-      <!-- Actions -->
-      <div class="navbar-actions">
-        <a href="../ShoppingCartPage/shopping_cart_page.html"><img src="../../../Assets/Icons/shopping-cart.svg"
-            class="icon"></a>
-        <a href="#"><img src="../../../Assets/Icons/heart.svg" class="icon"></a>
-        <a href="#"><img src="../../../Assets/Icons/user.svg" class="icon"></a>
+      <!-- Bottom Bar -->
+      <div class="navbar-bottom">
+        <a href="../SearchPage/search_page.html" class="category-btn category-btn-link">
+          <span>All Categories</span>
+          <img src="../../../Assets/Icons/chevron-down.svg" class="icon">
+        </a>
+        <div class="support">
+          <img src="../../../Assets/Icons/Headset.svg" class="icon">
+          <span>Support</span>
+        </div>
       </div>
 
-      <!-- Mobile Menu Button -->
-      <div class="navbar-toggle"><img src="../../../Assets/Icons/menu.svg" class="icon"></div>
+    </header>
 
-    </div>
+    <div class="container">
 
-    <!-- Bottom Bar -->
-    <div class="navbar-bottom">
-      <a href="../SearchPage/search_page.html" class="category-btn category-btn-link">
-        <span>All Categories</span>
-        <img src="../../../Assets/Icons/chevron-down.svg" class="icon">
-      </a>
-      <div class="support">
-        <img src="../../../Assets/Icons/Headset.svg" class="icon">
-        <span>Support</span>
+      <div class="path">
+        Home / User Profile / Shopping Cart / Checkout
       </div>
-    </div>
 
-  </header>
+      <div class="main">
 
-  <div class="container">
+        <!-- LEFT -->
+        <div class="left">
 
-    <div class="path">
-      Home / User Profile / Shopping Cart / Checkout
-    </div>
+          <div class="section">
+            <h2>Billing Information</h2>
+            <div class="divider"></div>
 
-    <div class="main">
-
-      <!-- LEFT -->
-      <div class="left">
-
-        <div class="section">
-          <h2>Billing Information</h2>
-          <div class="divider"></div>
-
-          <div class="row">
-            <div class="input-group">
-              <label>First Name</label>
-              <input type="text">
+            <div class="row">
+              <div class="input-group">
+                <label>First Name</label>
+                <input type="text" name="firstName" id="first-name" required>
+                <span class="field-error" data-error-for="first-name"></span>
+              </div>
+              <div class="input-group">
+                <label>Last Name</label>
+                <input type="text" name="lastName" id="last-name" required>
+                <span class="field-error" data-error-for="last-name"></span>
+              </div>
             </div>
-            <div class="input-group">
-              <label>Last Name</label>
-              <input type="text">
+
+            <div class="row">
+              <div class="input-group">
+                <label>Email</label>
+                <input type="email" name="email" id="email" required>
+                <span class="field-error" data-error-for="email"></span>
+              </div>
+              <div class="input-group">
+                <label>Phone Number</label>
+                <input type="text" name="phone" id="phone" required>
+                <span class="field-error" data-error-for="phone"></span>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-group">
+                <label>Country</label>
+                <select name="country" id="country" required>
+                  <option value="">Select country</option>
+                  <option>Algeria</option>
+                </select>
+                <span class="field-error" data-error-for="country"></span>
+              </div>
+              <div class="input-group">
+                <label>Region/State</label>
+                <input type="text" name="region" id="region" required>
+                <span class="field-error" data-error-for="region"></span>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-group">
+                <label>City</label>
+                <input type="text" name="city" id="city" required>
+                <span class="field-error" data-error-for="city"></span>
+              </div>
+              <div class="input-group">
+                <label>Zip Code</label>
+                <input type="text" name="zipCode" id="zip-code" required>
+                <span class="field-error" data-error-for="zip-code"></span>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-group">
+                <label>Address</label>
+                <input type="text" name="address" id="address" required>
+                <span class="field-error" data-error-for="address"></span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="section">
+            <h2>Payment Option</h2>
+            <div class="divider"></div>
+
+            <div class="payment" role="radiogroup" aria-label="Payment method">
+              <button type="button" class="payment-method" data-payment-method="credit-card">Credit Card</button>
+              <button type="button" class="payment-method active" data-payment-method="cash">Cash on Delivery</button>
+            </div>
+
+            <div class="credit-card-fields" id="credit-card-fields" hidden>
+              <div class="row">
+                <div class="input-group">
+                  <label>Card Holder Name</label>
+                  <input type="text" name="cardHolderName" id="card-holder-name">
+                  <span class="field-error" data-error-for="card-holder-name"></span>
+                </div>
+                <div class="input-group">
+                  <label>Card Number</label>
+                  <input type="text" name="cardNumber" id="card-number" inputmode="numeric">
+                  <span class="field-error" data-error-for="card-number"></span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-group">
+                  <label>Expiry Date</label>
+                  <input type="text" name="expiryDate" id="expiry-date" placeholder="MM/YY">
+                  <span class="field-error" data-error-for="expiry-date"></span>
+                </div>
+                <div class="input-group">
+                  <label>CVV</label>
+                  <input type="text" name="cvv" id="cvv" inputmode="numeric">
+                  <span class="field-error" data-error-for="cvv"></span>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="row">
-            <div class="input-group">
-              <label>Email</label>
-              <input type="email">
-            </div>
-            <div class="input-group">
-              <label>Phone Number</label>
-              <input type="text">
-            </div>
-          </div>
+          <div class="section">
+            <h2>Additional Details</h2>
+            <div class="divider"></div>
 
-          <div class="checkbox">
-            <input type="checkbox"> Ship into different address
-          </div>
-
-          <div class="row">
             <div class="input-group">
-              <label>Country</label>
-              <select>
-                <option>Algeria</option>
-              </select>
-            </div>
-            <div class="input-group">
-              <label>Region/State</label>
-              <input type="text">
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-group">
-              <label>City</label>
-              <input type="text">
-            </div>
-            <div class="input-group">
-              <label>Zip Code</label>
-              <input type="text">
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="input-group">
-              <label>Address</label>
-              <input type="text">
+              <label>Order notes (optional)</label>
+              <textarea name="notes" id="notes"></textarea>
             </div>
           </div>
 
         </div>
 
-        <div class="section">
-          <h2>Payment Option</h2>
-          <div class="divider"></div>
+        <!-- RIGHT -->
+        <div class="right">
+          <div class="summary">
+            <h2>Order Summary</h2>
 
-          <div class="payment">
-            <div>Credit Card</div>
-            <div class="active">Cash on Delivery</div>
-          </div>
-        </div>
+            <div class="summary-items">
+              <div class="product summary-item" data-unit-price="23" data-quantity="2">
+                <img src="https://via.placeholder.com/60">
+                <div class="product-info">
+                  Product Name<br>
+                  <span class="summary-quantity">2</span> × <span class="price summary-unit-price">$23</span>
+                </div>
+                <span class="summary-line-total"></span>
+              </div>
 
-        <div class="section">
-          <h2>Additional Details</h2>
-          <div class="divider"></div>
-
-          <div class="input-group">
-            <label>Order notes (optional)</label>
-            <textarea></textarea>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- RIGHT -->
-      <div class="right">
-        <div class="summary">
-          <h2>Order Summary</h2>
-
-          <div class="product">
-            <img src="https://via.placeholder.com/60">
-            <div class="product-info">
-              Product Name<br>
-              2 × <span class="price">$23</span>
+              <div class="product summary-item" data-unit-price="23" data-quantity="2">
+                <img src="https://via.placeholder.com/60">
+                <div class="product-info">
+                  Product Name<br>
+                  <span class="summary-quantity">2</span> × <span class="price summary-unit-price">$23</span>
+                </div>
+                <span class="summary-line-total"></span>
+              </div>
             </div>
-          </div>
 
-          <div class="product">
-            <img src="https://via.placeholder.com/60">
-            <div class="product-info">
-              Product Name<br>
-              2 × <span class="price">$23</span>
+            <div class="totals">
+              <div><span>Sub-Total:</span><span id="summary-subtotal">$0.00</span></div>
+              <div><span>Shipping:</span><span id="summary-shipping">$0.00</span></div>
+              <hr>
+              <div class="total"><span>Total:</span><span id="summary-total">$0.00</span></div>
             </div>
-          </div>
 
-          <div class="totals">
-            <div><span>Sub-Total:</span><span>$129</span></div>
-            <div><span>Shipping:</span><span>$12</span></div>
-            <hr>
-            <div class="total"><span>Total:</span><span>$141</span></div>
+            <button class="btn" type="submit">Place Order →</button>
+            <p class="checkout-message" id="checkout-message" aria-live="polite"></p>
           </div>
-
-          <button class="btn">Place Order →</button>
         </div>
+
       </div>
 
     </div>
 
-  </div>
+  </form>
 
 
   <!-- Footer -->
@@ -276,6 +319,8 @@
     </div>
 
   </footer>
+
+  <script src="checkout_page.js"></script>
 
 </body>
 

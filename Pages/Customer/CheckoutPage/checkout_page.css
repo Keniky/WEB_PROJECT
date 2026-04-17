@@ -9,6 +9,10 @@
       color: #212121;
     }
 
+    .checkout-form {
+      display: block;
+    }
+
     .container {
       width: 100%;
     }
@@ -87,14 +91,6 @@
       resize: none;
     }
 
-    .checkbox {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 20px;
-      font-size: 14px;
-      color: #424242;
-    }
 
     /* PAYMENT */
     .payment {
@@ -103,17 +99,43 @@
       margin-top: 20px;
     }
 
-    .payment div {
+    .payment-method {
       flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       border: 1px solid #e0e0e0;
       padding: 20px;
       border-radius: 6px;
       text-align: center;
       cursor: pointer;
+      background: #fff;
+      font: inherit;
     }
 
-    .payment div.active {
+    .payment-method.active {
       border-bottom: 3px solid #ff6a00;
+    }
+
+    .credit-card-fields {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      background: #fafafa;
+    }
+
+    .field-error {
+      min-height: 16px;
+      font-size: 12px;
+      color: #d93025;
+    }
+
+    input.invalid,
+    select.invalid,
+    textarea.invalid {
+      border-color: #d93025;
+      outline: none;
     }
 
     /* RIGHT SIDE */
@@ -123,10 +145,17 @@
       padding: 20px;
     }
 
+    .summary-items {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
     .product {
       display: flex;
       gap: 10px;
       margin-bottom: 10px;
+      align-items: center;
     }
 
     .product img {
@@ -137,6 +166,12 @@
 
     .product-info {
       font-size: 14px;
+    }
+
+    .summary-line-total {
+      margin-left: auto;
+      font-weight: 600;
+      color: #424242;
     }
 
     .price {
@@ -176,6 +211,14 @@
       border-radius: 6px;
       font-weight: 600;
       cursor: pointer;
+    }
+
+    .checkout-message {
+      margin-top: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #1a73e8;
+      min-height: 20px;
     }
 
     /* RESPONSIVE */
