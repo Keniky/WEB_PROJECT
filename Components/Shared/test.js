@@ -13,62 +13,20 @@ addButton.addEventListener("click" , (ev) => {
 
 
 
-let listOfScrollPage = document.getElementsByName("page-index");
-let scrollIndex = 0;
-let numberOfScrollIndexes = 6;
 
-let left = document.getElementById("left");
-
-let right = document.getElementById("right");
-
-left.addEventListener("click" , (ev) => {
-    console.log("it is working" + "here is list of items" , listOfPages);
-    listOfScrollPage[scrollIndex].removeAttribute("checked");
-    scrollIndex = (scrollIndex + (numberOfScrollIndexes - 1)) % numberOfScrollIndexes;
-    listOfScrollPage[scrollIndex].setAttribute("checked" , ""); 
-});
-
-right.addEventListener("click" , (ev) => {
-    
-    listOfScrollPage[scrollIndex].removeAttribute("checked");
-    scrollIndex = (scrollIndex + 1) % numberOfScrollIndexes;
-    listOfScrollPage[scrollIndex].setAttribute("checked" , ""); 
-
-});
-
-// aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-
-let listOfPages = document.getElementsByName("pageindex");
-let index = 0;
-let numberOfIndexes = 6;
-
-let arrowForward = document.getElementById("arrow-forward");
-let arrowBackward = document.getElementById("arrow-backward");
-
-arrowForward.addEventListener("click" , (ev) =>{
-    console.log(index);
-    listOfPages[index].removeAttribute("checked");
-    index  = (index + 1)% numberOfIndexes;
-    listOfPages[index].setAttribute("checked" ,"");
-});
-
-arrowBackward.addEventListener("click" , (ev) =>{
-    console.log(index);
-    listOfPages[index].removeAttribute("checked");
-    index  = (index + 5)% numberOfIndexes;
-    listOfPages[index].setAttribute("checked" ,"");
-});
 
 // aaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 let addImage = document.getElementById("add-image");
+console.log("aaa");
 
 let img = document.querySelector("#add-image img");
 let file = document.querySelector("#add-image input");    
 
 addImage.addEventListener("click",(ev) => {
-
+    alert("aaa")
    //add image by click lol 
+   
    img.src = "../images/ShopPal-Logo.png";
    console.log(img.attributes);
 

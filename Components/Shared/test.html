@@ -7,10 +7,10 @@
         <link rel="stylesheet" href="../../Design_System/css/variables.css"/>
         <link rel="stylesheet" href="icons.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="frame.css">
         <link rel="stylesheet" href="iconbuttons.css"/>
         <link rel="stylesheet" href="controls.css"/>
         <link rel="stylesheet" href="ratings.css">
-        <link rel="stylesheet" href="frame.css">
         <link rel="stylesheet" href="input.css">
         <link rel="stylesheet" href="dropdown.css"/>
     </head>
@@ -177,9 +177,9 @@
         </div>
         <br>
         <div class="inline-display quantity">
-            <label class = "material-icons alter-quantity">remove</label>
-            <label>1</label>
-            <label class = "material-icons alter-quantity">add</label>
+            <label class = "material-icons alter-quantity" id="remove">remove</label>
+            <label id="pageNumber">1</label>
+            <label class = "material-icons alter-quantity" id="add">add</label>
         </div>
         <br>
         <!-- add rating -->
@@ -202,9 +202,9 @@
         <div>
             
         </div>
-        <div class=" inline-display">
+        <div class=" inline-display" >
             <span class="frame material-icons"> videocam</span>
-            <span class="frame material-icons"> image</span>
+            <img  class="frame material-icons" id="add-image" alt="image"></img>
         </div>
 
         <!-- label follows id not name -->
@@ -318,4 +318,6 @@
             </div>
         </div>
     </body>
+    <script src="test.js"></script>
+
 </html>

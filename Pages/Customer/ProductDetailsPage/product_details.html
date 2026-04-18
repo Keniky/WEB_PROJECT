@@ -17,6 +17,9 @@
   <link rel="stylesheet" href="../../../Design_System/CSS/variables.css">
   <link rel="stylesheet" href="../../../Design_System/CSS/fonts.css">
 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="../../../Components/Shared/frame.css">
+
 </head>
 
 <body>
@@ -99,9 +102,14 @@
 
       <!-- LEFT IMAGES -->
       <div class="product-images">
-
-        <span class="frame material-icons"> image</span>
-        <div class="placeholder large">Available Soon</div>
+        <div class="display-images">
+          <img class = "material-icons" src="shoe_images/shoe_image1.jpg" id="image1" alt="image"/>
+          <img class = "material-icons" src="shoe_images/shoe_image2.webp" id="image2" alt="image"/>
+          <img class = "material-icons" src="shoe_images/shoe_image3.jpg" id="image3" alt="image"/>
+        </div>
+        <div class="placeholder large">
+          <img class = "material-icons" src="" id="image" alt="image"/>
+        </div>
       </div>
 
       <!-- RIGHT INFO -->
@@ -147,9 +155,9 @@
         <div class="actions">
 
           <div class="counter">
-            <button>-</button>
-            <span>1</span>
-            <button>+</button>
+            <button id="remove">-</button>
+            <span id="numberOfProducts">1</span>
+            <button id="add">+</button>
           </div>
 
           <a href="../ShoppingCartPage/shopping_cart_page.html" class="btn primary">ADD TO CART</a>
