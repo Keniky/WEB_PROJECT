@@ -157,7 +157,7 @@ body {
 
 .best-deals {
   display: flex;
-  padding: 50px 300px;
+  padding: 50px 30px;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -217,7 +217,7 @@ body {
 
 .featured-products {
   display: flex;
-  padding: 50px 300px;
+  padding: 50px 30px;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -280,7 +280,7 @@ body {
 
 .product-collections {
   display: flex;
-  padding: 50px 300px;
+  padding: 50px 30px;
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
