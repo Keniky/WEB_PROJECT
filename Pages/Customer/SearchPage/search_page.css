@@ -20,7 +20,7 @@ body {
 .container {
   display: flex;
   gap: 20px;
-  padding: 20px 300px 50px 30px;
+  padding: 20px 300px 50px 300px;
 }
 
 /* SIDEBAR */

@@ -1,3 +1,5 @@
+console.log("hi");
+
 let pageNumber = document.getElementById("pageNumber");
 
 let removeButton = document.getElementById("remove");
