@@ -3,7 +3,7 @@ const remove = document.getElementById("remove");
 const add = document.getElementById("add");
 const maxNumberOfProducts = 20;
 remove.addEventListener("click" , (ev)=>{
-    if(numberOfProducts.innerText >= 1){
+    if(numberOfProducts.innerText > 1){
         numberOfProducts.innerText --;
     }
 });
@@ -15,7 +15,6 @@ add.addEventListener("click" , (ev)=>{
 
 
 let mainImage = document.getElementById("image");
-
 
 const image1 = document.getElementById("image1");
 mainImage.src = image1.src;

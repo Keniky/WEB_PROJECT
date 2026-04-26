@@ -1,100 +1,92 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const cartItems = Array.from(document.querySelectorAll('.cart-item'));
-  const totalAmount = document.querySelector('.amount');
-  const checkoutLink = document.querySelector('.checkout a.btn.secondary');
 
-  const formatCurrency = (value) => `$${value.toFixed(2)}`;
+const cartItems = document.querySelectorAll('.cart-item');
 
-  const buildCheckoutHref = (subtotal) => {
-    const url = new URL('../CheckoutPage/checkout_page.html', window.location.href);
-    url.searchParams.set('subtotal', subtotal.toFixed(2));
-    return url.toString();
-  };
+const totalAmount = document.querySelector('.amount');
 
-  const getItemElements = (item) => ({
-    quantityValue: item.querySelector('.counter span'),
-    subtotalValue: item.querySelector('.subtotal'),
-    decreaseButton: item.querySelector('.counter button:first-child'),
-    increaseButton: item.querySelector('.counter button:last-child'),
-    removeButton: item.querySelector('.remove'),
-  });
+function formatCurrency(value) {
+  return `$${value.toFixed(2)}`;
+}
 
-  const getItemQuantity = (item) => {
-    const { quantityValue } = getItemElements(item);
-    return Number.parseInt(quantityValue.textContent, 10) || 1;
-  };
 
-  const getUnitPrice = (item) => Number.parseFloat(item.dataset.unitPrice || '0') || 0;
+function updateItemSubtotal(item) {
+  const quantity = item.querySelector('.counter span');
 
-  const updateItemSubtotal = (item) => {
-    const { subtotalValue } = getItemElements(item);
-    const quantity = getItemQuantity(item);
-    const unitPrice = getUnitPrice(item);
-    subtotalValue.textContent = formatCurrency(unitPrice * quantity);
-  };
+  const subtotal = item.querySelector('.subtotal');
 
-  const updateCartTotal = () => {
-    const total = cartItems.reduce((sum, item) => {
-      if (!document.body.contains(item)) {
-        return sum;
-      }
+  const unitPrice = Number.parseFloat(item.dataset.unitPrice || '0') || 0;
 
-      const quantity = getItemQuantity(item);
-      const unitPrice = getUnitPrice(item);
-      return sum + (unitPrice * quantity);
-    }, 0);
+  const quantity = Number.parseInt(quantity.textContent, 10) || 1;
 
-    if (totalAmount) {
-      totalAmount.textContent = formatCurrency(total);
-    }
+  const subtotal = unitPrice * quantity;
 
-    if (checkoutLink) {
-      checkoutLink.href = buildCheckoutHref(total);
-    }
+  subtotal.textContent = formatCurrency(subtotal);
+}
 
-    return total;
-  };
-
-  const refreshCart = () => {
-    cartItems.forEach((item) => {
-      if (document.body.contains(item)) {
-        updateItemSubtotal(item);
-      }
-    });
-
-    updateCartTotal();
-  };
-
+function updateCartTotal() {
+  let total = 0;
   cartItems.forEach((item) => {
-    const { decreaseButton, increaseButton, removeButton } = getItemElements(item);
 
-    decreaseButton.addEventListener('click', () => {
-      const quantityValue = getItemElements(item).quantityValue;
-      const currentQuantity = getItemQuantity(item);
+    if (!item.isConnected) {
+      return;
+    }
 
-      if (currentQuantity <= 1) {
-        return;
-      }
+    const quantity = item.querySelector('.counter span');
+    const unitPrice = Number.parseFloat(item.dataset.unitPrice || '0') || 0;
+    const quantity = Number.parseInt(quantity.textContent, 10) || 1;
 
-      quantityValue.textContent = String(currentQuantity - 1);
-      updateItemSubtotal(item);
-      updateCartTotal();
-    });
-
-    increaseButton.addEventListener('click', () => {
-      const quantityValue = getItemElements(item).quantityValue;
-      const currentQuantity = getItemQuantity(item);
-
-      quantityValue.textContent = String(currentQuantity + 1);
-      updateItemSubtotal(item);
-      updateCartTotal();
-    });
-
-    removeButton.addEventListener('click', () => {
-      item.remove();
-      updateCartTotal();
-    });
+    // Add this row amount to running total.
+    total += unitPrice * quantity;
   });
 
-  refreshCart();
+  totalAmount.textContent = formatCurrency(total);
+}
+
+// Attach buttons for each row: decrease, increase, remove.
+// item here is each single cart row from the NodeList.
+cartItems.forEach((item) => {
+  const decreaseBtn = item.querySelector('.counter button:first-child');
+
+  const increaseBtn = item.querySelector('.counter button:last-child');
+
+  const removeBtn = item.querySelector('.remove');
+
+  const quantity = item.querySelector('.counter span');
+
+
+  decreaseBtn.addEventListener('click', () => {
+    const currentQuantity = Number.parseInt(quantity.textContent, 10) || 1;
+
+
+    if (currentQuantity <= 1) {
+      return;
+    }
+
+    const nextQuantity = currentQuantity - 1;
+
+    quantity.textContent = String(nextQuantity);
+
+    updateItemSubtotal(item);
+    updateCartTotal();
+  });
+
+  increaseBtn.addEventListener('click', () => {
+    const currentQuantity = Number.parseInt(quantity.textContent, 10) || 1;
+    if(currentQuantity >= 20) {
+      return;
+    }
+    const nextQuantity = currentQuantity + 1;
+
+    quantity.textContent = String(nextQuantity);
+    updateItemSubtotal(item);
+    updateCartTotal();
+  });
+
+  removeBtn.addEventListener('click', () => {
+    item.remove();
+    updateCartTotal();
+  });
+
+  updateItemSubtotal(item);
 });
+
+updateCartTotal();

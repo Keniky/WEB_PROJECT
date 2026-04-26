@@ -4,7 +4,6 @@ const Items = document.getElementsByClassName("product_card_item");
 const itemsArray = Array.from(Items);
 
 const selectCategory = document.getElementById("select-category");
-const categoryTag = document.getElementById("category-Tag");
 
 selectCategory.addEventListener("change" , (ev) => {
     //https://stackoverflow.com/questions/1085801/get-selected-value-in-dropdown-list-using-javascript
@@ -21,7 +20,7 @@ selectCategory.addEventListener("change" , (ev) => {
         if((item.querySelector(".category").textContent) != filter && filter != "All Tech"){
             item.style.display = 'none';
         }else{
-            item.style.display = "flex";
+            item.style.display = "grid";
         }
     });
 
