@@ -1,8 +1,33 @@
 const sortType = document.getElementById("sort-select");
 
+const Items = document.getElementsByClassName("product_card_item");
+const itemsArray = Array.from(Items);
+
+const selectCategory = document.getElementById("select-category");
+const categoryTag = document.getElementById("category-Tag");
+
+selectCategory.addEventListener("change" , (ev) => {
+    //https://stackoverflow.com/questions/1085801/get-selected-value-in-dropdown-list-using-javascript
+
+    let valueOfSelectCategory = selectCategory.options[selectCategory.selectedIndex].text;
+
+    const queredItems = document.querySelector(".products");
+
+    let filter = valueOfSelectCategory;
+
+
+    itemsArray.forEach(item => {
+        console.log(item.hidden);
+        if((item.querySelector(".category").textContent) != filter && filter != "All Tech"){
+            item.style.display = 'none';
+        }else{
+            item.style.display = "flex";
+        }
+    });
+
+});
+
 sortType.addEventListener("change" ,(ev) =>{
-    const Items = document.getElementsByClassName("product_card_item");
-    const itemsArray = Array.from(Items);
     const queredItems = document.querySelector(".products");
 
 
@@ -36,5 +61,7 @@ sortType.addEventListener("change" ,(ev) =>{
 
     console.log(queredItems);
     console.log(queredItems.children.length);
+    //if item exists in document it removes it and then inserts it 
     itemsArray.forEach(item => queredItems.appendChild(item));
+    //instead of foreach(item){queredItem.appendChild()};
 });

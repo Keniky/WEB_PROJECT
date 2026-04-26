@@ -3,17 +3,17 @@
     <head>
         <meta charset="UTF-8"/>
         <title>Test Page</title>
-        <link rel="stylesheet" href="buttons.css">
-        <link rel="stylesheet" href="../../Design_System/css/variables.css"/>
-        <link rel="stylesheet" href="icons.css"/>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="frame.css">
-        <link rel="stylesheet" href="iconbuttons.css"/>
-        <link rel="stylesheet" href="controls.css"/>
-        <link rel="stylesheet" href="ratings.css">
-        <link rel="stylesheet" href="input.css">
-        <link rel="stylesheet" href="dropdown.css"/>
     </head>
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="../../Design_System/css/variables.css"/>
+    <link rel="stylesheet" href="icons.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="frame.css">
+    <link rel="stylesheet" href="iconbuttons.css"/>
+    <link rel="stylesheet" href="controls.css"/>
+    <link rel="stylesheet" href="ratings.css">
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="dropdown.css"/>
     <body>
         <!--buttons-->
         <div class = "btn-enabled btn btn-primary">
@@ -64,15 +64,15 @@
         <div class = " btn-pill btn-outline disabled">
             test3
         </div>
-
+        
         <!--shop logo -->
         <br>
-
+        
         <div>
             <span class = "shop-logo"></span>
         </div>
         <br>
-
+        
         <!--icon button-->
         <div class = "btn-enabled icon-btn icon-btn-primary">
             test
@@ -111,7 +111,7 @@
                 <input type="checkbox"/>
                 <span class="toggleslider round"></span>
             </label>
-
+            
             <label class="switch">
                 <!-- trick to take input without javascript -->
                 <input type="checkbox" checked/>
@@ -119,7 +119,7 @@
             </label>
         </div>
         <!-- slider now -->
-
+        
         <div>
             <input type="range" min="1" max="100"/>
         </div>
@@ -152,7 +152,7 @@
                 <input type="radio" name="page-index"/>
                 <span>05</span>
             </label>
-
+            
 
             <label class="circle number-circle">
                 <input type="radio" name="page-index"/>
@@ -183,9 +183,9 @@
         </div>
         <br>
         <!-- add rating -->
-         <!-- two fucking hours with this shit just to discover that i fucking
+        <!-- two fucking hours with this shit just to discover that i fucking
               wasted all my time on a simple bug and all the retard llms were giving me random answers 
-         -->
+              -->
         <div class="material-icons ratings">
             <input type="radio" name="star" id="star1">
             <label for="star1">star</label>
@@ -201,39 +201,39 @@
         <br>
         <div>
             
-        </div>
-        <div class=" inline-display" >
-            <span class="frame material-icons"> videocam</span>
-            <img  class="frame material-icons" id="add-image" alt="image"></img>
-        </div>
-
-        <!-- label follows id not name -->
-
-        <div class = "text-input">
-            <i class = "material-icons">visibility</i>
-            <input type="text" id = "text-input" placeholder="Please Enter your text">
-            <span>
-                <input type="checkbox" checked class = "password-i">
-                <i class = "material-icons password-i">visibility</i> 
-            </span>
-        </div>
-        <div class = "text-input disabled">
-            <i class = "material-icons">visibility</i>
-            <input type="text" disabled id = "text-input" placeholder="Please Enter your text"> 
-        </div>
-
-        
-        <div class="rich-text">
-            <textarea id="review" placeholder="please insert what you want" rows = 13></textarea>
-            <div class="rich-text-bottom">
-                <label>
-                    <input type="checkbox">
-                    <span class = "material-icons">format_bold</span>
-                </label>
-
-                <label>
-                    <input type="checkbox">
-                    <span class = "material-icons">format_italic</span>
+    </div>
+    <div class=" inline-display" >
+        <span class="frame material-icons"> videocam</span>
+        <img  class="frame material-icons" id="add-image" alt="image"></img>
+    </div>
+    
+    <!-- label follows id not name -->
+    
+    <div class = "text-input">
+        <i class = "material-icons">visibility</i>
+        <input type="text" id = "text-input" placeholder="Please Enter your text">
+        <span>
+            <input type="checkbox" checked class = "password-i">
+            <i class = "material-icons password-i">visibility</i> 
+        </span>
+    </div>
+    <div class = "text-input disabled">
+        <i class = "material-icons">visibility</i>
+        <input type="text" disabled id = "text-input" placeholder="Please Enter your text"> 
+    </div>
+    
+    
+    <div class="rich-text">
+        <textarea id="review" placeholder="please insert what you want" rows = 13></textarea>
+        <div class="rich-text-bottom">
+            <label>
+                <input type="checkbox">
+                <span class = "material-icons">format_bold</span>
+            </label>
+            
+            <label>
+                <input type="checkbox">
+                <span class = "material-icons">format_italic</span>
                 </label>
                 
                 <label>
@@ -254,34 +254,34 @@
                 </label>
                 
                 <span class = "divider"></span>
-
+                
                 <label>
                     <input type="checkbox">
                     <span class = "material-icons">format_quote</span>
                 </label>
-
+                
                 <label>
                     <input type="checkbox">
                     <span class = "material-icons">code</span>
                 </label>
-               
+                
                 <div class="button-send">
                     <span id="send-message">Send</span>
                     <span class = "material-icons">send</span>
                 </div>
-
+                
             </div>
         </div>
-
+        
         <div class = "text-input">
-                <div class="item-menu">
-                    <span class="material-icons">menu</span>
-                    <span>All items</span>
-                </div>
-                <input type="text" placeholder="Please Enter your text">
-                <i class = "material-icons">search</i> 
+            <div class="item-menu">
+                <span class="material-icons">menu</span>
+                <span>All items</span>
+            </div>
+            <input type="text" placeholder="Please Enter your text">
+            <i class = "material-icons">search</i> 
         </div>
-
+        
         <label for=""> idk what</label>
         <div class = "dropdown">
             <button> DropDown List
@@ -291,19 +291,19 @@
             </button>
             <div class="content" >
                 <a href="">
-                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 6H20M4 12H20M4 18H20" stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg> 
                     Drop Down Item</a>
-                <a href="">
-                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 6H20M4 12H20M4 18H20" stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg> 
+                    <a href="">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 6H20M4 12H20M4 18H20" stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg> 
                     Drop Down Item</a>
-                <a href="">
-                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 6H20M4 12H20M4 18H20" stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg> 
+                    <a href="">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 6H20M4 12H20M4 18H20" stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg> 
                     Drop Down Item</a>
                 <a href="">
                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -318,6 +318,5 @@
             </div>
         </div>
     </body>
-    <script src="test.js"></script>
-
+    <script src="test.js"> </script>
 </html>
