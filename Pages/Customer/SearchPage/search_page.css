@@ -20,7 +20,7 @@ body {
 .container {
   display: flex;
   gap: 20px;
-  padding: 20px 300px 50px 30px;
+  padding: 20px 300px 50px;
 }
 
 /* SIDEBAR */
@@ -120,7 +120,7 @@ body {
 /* ACTIVE FILTERS */
 .active-filters {
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   align-items: center;
   background: linear-gradient(90deg, var(--color-primary-light), #f8fbff);
   padding: 12px 24px;
@@ -170,7 +170,6 @@ body {
 /* RESPONSIVE */
 /* ===================== */
 
-/* TABLET */
 @media (max-width: 1200px) {
   .container {
     padding: 20px 100px;
@@ -181,7 +180,6 @@ body {
   }
 }
 
-/* SMALL TABLET */
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
@@ -198,7 +196,6 @@ body {
   }
 }
 
-/* MOBILE */
 @media (max-width: 600px) {
   .container {
     padding: 20px;
