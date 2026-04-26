@@ -381,3 +381,129 @@ body {
   /* 137.5% */
   letter-spacing: -0.32px;
 }
+
+
+@media (max-width: 1280px) {
+
+  .hero-section,
+  .featured-services-row,
+  .best-deals,
+  .product-categories,
+  .featured-products,
+  .promotional-highlight-banner,
+  .product-collections,
+  .newsletter-subscription {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .hero-section {
+    height: auto;
+  }
+
+  .hero-section .left,
+  .hero-section .right,
+  .best-deals .product-cards .left,
+  .featured-products .product-cards .right {
+    width: 100%;
+    max-width: 427px;
+  }
+
+  .best-deals .product-cards .right,
+  .featured-products .product-cards .left {
+    width: 100%;
+    flex: 1 1 auto;
+    grid-template-columns: repeat(3, minmax(204px, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+
+  .hero-section,
+  .featured-services-row,
+  .best-deals,
+  .product-categories,
+  .featured-products,
+  .promotional-highlight-banner,
+  .product-collections,
+  .newsletter-subscription {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .hero-section,
+  .best-deals .product-cards,
+  .featured-products .product-cards,
+  .promotional-highlight-banner,
+  .product-collections {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .promotional-highlight-banner>div {
+    width: 100%;
+  }
+
+  .best-deals .product-cards .left,
+  .best-deals .product-cards .right,
+  .featured-products .product-cards .left,
+  .featured-products .product-cards .right {
+    width: 100%;
+    max-width: none;
+    flex: 1 1 auto;
+  }
+
+  .best-deals .product-cards .right,
+  .featured-products .product-cards .left {
+    grid-template-columns: repeat(2, minmax(204px, 1fr));
+  }
+
+  .featured-services-row {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .newsletter-subscription .text p,
+  .newsletter-subscription .subscription-form input {
+    width: 100%;
+    max-width: 580px;
+  }
+
+  .newsletter-subscription .subscription-form {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .header .view-all-btn {
+    margin-left: 0;
+  }
+
+  .best-deals .product-cards .right,
+  .featured-products .product-cards .left {
+    grid-template-columns: 1fr;
+  }
+
+  .categories-list {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .category-element {
+    width: calc(50% - 14px);
+    min-width: 130px;
+  }
+
+  .newsletter-subscription .subscription-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
