@@ -13,7 +13,7 @@ function updateItemSubtotal(item) {
 
   const subtotal = item.querySelector('.subtotal');
 
-  const unitPrice = Number.parseFloat(item.dataset.unitPrice || '0') || 0;
+  const unitPrice = Number.parseFloat(item.dataset.unitPrice) || 0;
 
   const quantity = Number.parseInt(quantity.textContent, 10) || 1;
 
@@ -31,18 +31,15 @@ function updateCartTotal() {
     }
 
     const quantity = item.querySelector('.counter span');
-    const unitPrice = Number.parseFloat(item.dataset.unitPrice || '0') || 0;
+    const unitPrice = Number.parseFloat(item.dataset.unitPrice) || 0;
     const quantity = Number.parseInt(quantity.textContent, 10) || 1;
 
-    // Add this row amount to running total.
     total += unitPrice * quantity;
   });
 
   totalAmount.textContent = formatCurrency(total);
 }
 
-// Attach buttons for each row: decrease, increase, remove.
-// item here is each single cart row from the NodeList.
 cartItems.forEach((item) => {
   const decreaseBtn = item.querySelector('.counter button:first-child');
 
