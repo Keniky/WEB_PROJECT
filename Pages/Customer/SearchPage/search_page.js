@@ -1,66 +1,181 @@
 const sortType = document.getElementById("sort-select");
-
-const Items = document.getElementsByClassName("product_card_item");
-const itemsArray = Array.from(Items);
-
 const selectCategory = document.getElementById("select-category");
+const productsContainer = document.querySelector(".products");
+const resultCountElement = document.querySelector(".active-filters > div");
 
-selectCategory.addEventListener("change" , (ev) => {
-    //https://stackoverflow.com/questions/1085801/get-selected-value-in-dropdown-list-using-javascript
+const itemsArray = Array.from(document.getElementsByClassName("product_card_item"));
+const filterBoxes = Array.from(document.querySelectorAll(".filter-box"));
+const priceInputs = document.querySelectorAll(".price-inputs input");
+const minPriceInput = priceInputs[0];
+const maxPriceInput = priceInputs[1];
 
-    let valueOfSelectCategory = selectCategory.options[selectCategory.selectedIndex].text;
+function normalizeText(text) {
+    return (text || "").trim().toLowerCase();
+}
 
-    const queredItems = document.querySelector(".products");
+function parsePrice(value) {
+    return parseFloat((value || "").replace("$", "").trim()) || 0;
+}
 
-    let filter = valueOfSelectCategory;
+function inferBrandFromTitle(title) {
+    const normalizedTitle = normalizeText(title);
 
+    if (normalizedTitle.includes("iphone")) return "Apple";
+    if (normalizedTitle.includes("galaxy")) return "Samsung";
+    if (normalizedTitle.includes("nokia")) return "Nokia";
+    if (normalizedTitle.includes("asus")) return "ASUS";
+    if (normalizedTitle.includes("msi")) return "MSI";
+    if (normalizedTitle.includes("logitech")) return "Logitech";
+    if (normalizedTitle.includes("aorus")) return "Gigabyte";
 
-    itemsArray.forEach(item => {
-        console.log(item.hidden);
-        if((item.querySelector(".category").textContent) != filter && filter != "All Tech"){
-            item.style.display = 'none';
-        }else{
-            item.style.display = "grid";
+    return "";
+}
+
+function inferSpecs(category, title) {
+    const specs = [];
+    const normalizedCategory = normalizeText(category);
+    const normalizedTitle = normalizeText(title);
+
+    if (["laptops", "tablets", "pc components", "smartphones"].includes(normalizedCategory)) {
+        specs.push("8GB RAM+");
+    }
+
+    if (["laptops", "tablets", "smartphones"].includes(normalizedCategory)) {
+        specs.push("256GB Storage+");
+        specs.push("Wi-Fi 6");
+    }
+
+    if (["laptops", "tablets", "monitors"].includes(normalizedCategory)) {
+        specs.push("13-inch+");
+    }
+
+    if (["laptops", "monitors"].includes(normalizedCategory)) {
+        specs.push("15-inch+");
+    }
+
+    if (normalizedTitle.includes("240 hz") || normalizedTitle.includes("144hz") || normalizedTitle.includes("75hz")) {
+        specs.push("15-inch+");
+    }
+
+    return specs;
+}
+
+function getSelectedBySection(title) {
+    const matchedBox = filterBoxes.find((box) => {
+        const heading = box.querySelector("h3");
+        return heading && normalizeText(heading.textContent) === normalizeText(title);
+    });
+
+    if (!matchedBox) return [];
+
+    return Array.from(matchedBox.querySelectorAll('input[type="checkbox"]:checked')).map((input) => {
+        const labelText = input.parentElement ? input.parentElement.textContent : "";
+        return labelText.trim();
+    });
+}
+
+function getItemMeta(item) {
+    const title = item.querySelector(".card-title")?.textContent?.trim() || "";
+    const category = item.querySelector(".category")?.textContent?.trim() || "";
+    const brand = item.querySelector(".brand")?.textContent?.trim() || inferBrandFromTitle(title);
+    const condition = item.querySelector(".condition")?.textContent?.trim() || "New";
+    const specs = inferSpecs(category, title);
+    const price = parsePrice(item.querySelector(".price-new")?.textContent || "");
+
+    return { title, category, brand, condition, specs, price };
+}
+
+function applyFilters() {
+    const selectedTopCategory = selectCategory?.value || "All Tech";
+    const selectedCategories = getSelectedBySection("Categories:");
+    const selectedBrands = getSelectedBySection("Brands:");
+    const selectedConditions = getSelectedBySection("Condition:");
+    const selectedSpecs = getSelectedBySection("Specs:");
+
+    const minValue = parseFloat(minPriceInput?.value || "");
+    const maxValue = parseFloat(maxPriceInput?.value || "");
+
+    const hasMin = !Number.isNaN(minValue);
+    const hasMax = !Number.isNaN(maxValue);
+
+    let finalMin = hasMin ? minValue : null;
+    let finalMax = hasMax ? maxValue : null;
+
+    if (finalMin !== null && finalMax !== null && finalMin > finalMax) {
+        const temp = finalMin;
+        finalMin = finalMax;
+        finalMax = temp;
+    }
+
+    let visibleCount = 0;
+
+    itemsArray.forEach((item) => {
+        const meta = getItemMeta(item);
+
+        const categoryMatchesTop = selectedTopCategory === "All Tech" || meta.category === selectedTopCategory;
+        const categoryMatchesCheckbox = selectedCategories.length === 0 || selectedCategories.includes(meta.category);
+        const brandMatches = selectedBrands.length === 0 || selectedBrands.includes(meta.brand);
+        const conditionMatches = selectedConditions.length === 0 || selectedConditions.includes(meta.condition);
+        const specsMatch = selectedSpecs.length === 0 || selectedSpecs.every((spec) => meta.specs.includes(spec));
+        const minMatches = finalMin === null || meta.price >= finalMin;
+        const maxMatches = finalMax === null || meta.price <= finalMax;
+
+        const shouldShow =
+            categoryMatchesTop &&
+            categoryMatchesCheckbox &&
+            brandMatches &&
+            conditionMatches &&
+            specsMatch &&
+            minMatches &&
+            maxMatches;
+
+        item.style.display = shouldShow ? "" : "none";
+        if (shouldShow) {
+            visibleCount += 1;
         }
     });
 
-});
+    if (resultCountElement) {
+        resultCountElement.textContent = `${visibleCount} Results found.`;
+    }
+}
 
-sortType.addEventListener("change" ,(ev) =>{
-    const queredItems = document.querySelector(".products");
+function sortItems() {
+    if (!productsContainer) return;
 
-
-    if(ev.target.value === "Name"){
-        itemsArray.sort((a,b) => {
-            const valA = a.querySelector(".card-title").textContent;
-            const valB = b.querySelector(".card-title").textContent;
-
+    if (sortType?.value === "Name") {
+        itemsArray.sort((a, b) => {
+            const valA = a.querySelector(".card-title")?.textContent?.trim() || "";
+            const valB = b.querySelector(".card-title")?.textContent?.trim() || "";
             return valA.localeCompare(valB);
-
         });
-
-        itemsArray.forEach(item => queredItems.appendChild(item));
-        return;
+    } else {
+        const direction = sortType?.value === "Price High" ? -1 : 1;
+        itemsArray.sort((a, b) => {
+            const valA = parsePrice(a.querySelector(".price-new")?.textContent || "");
+            const valB = parsePrice(b.querySelector(".price-new")?.textContent || "");
+            return (valA - valB) * direction;
+        });
     }
 
-    let direction = 1;
-    if(ev.target.value === "Price High"){
-        direction = -1;
-    }
-    //they said it is faster cuz of static element rather than html collection
-    //static is what it is , html is still connected to html page , query works like css
+    itemsArray.forEach((item) => productsContainer.appendChild(item));
+}
 
-
-    itemsArray.sort((a,b) => {
-        const valA = parseFloat(a.querySelector(".price-new").textContent.replace("$" ,""));
-        const valB = parseFloat(b.querySelector(".price-new").textContent.replace("$",""));
-
-        return (valA - valB) * direction;
-    });
-
-    console.log(queredItems);
-    console.log(queredItems.children.length);
-    //if item exists in document it removes it and then inserts it 
-    itemsArray.forEach(item => queredItems.appendChild(item));
-    //instead of foreach(item){queredItem.appendChild()};
+selectCategory?.addEventListener("change", applyFilters);
+sortType?.addEventListener("change", () => {
+    sortItems();
+    applyFilters();
 });
+
+filterBoxes.forEach((box) => {
+    box.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+        checkbox.addEventListener("change", applyFilters);
+    });
+});
+
+minPriceInput?.addEventListener("input", applyFilters);
+maxPriceInput?.addEventListener("input", applyFilters);
+
+sortItems();
+applyFilters();
+

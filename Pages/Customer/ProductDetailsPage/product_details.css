@@ -41,21 +41,23 @@ body {
 .product-images {
   width: 50%;
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
 }
 
-.display-images{
+.display-images {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
-  margin-inline:var(--space-sm) ;
-  
+  margin-inline: var(--space-sm);
+
 }
-.display-images img{
- width: 50px;
- height: 50px; 
+
+.display-images img {
+  width: 50px;
+  height: 50px;
 }
-.display-images img:hover{
+
+.display-images img:hover {
   cursor: pointer;
 }
 
@@ -66,9 +68,11 @@ body {
   justify-content: center;
   color: #777;
   font-size: 14px;
-  flex: 1;/* take as much as you can*/
+  flex: 1;
+  /* take as much as you can*/
 }
-.placeholder img{
+
+.placeholder img {
   height: 100%;
   width: 100%;
   transition: 0.4s;
@@ -209,9 +213,33 @@ body {
 .accordion {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 15px 15px 0;
   border-bottom: 1px solid #ccc;
   font-weight: 600;
+  cursor: pointer;
+}
+
+.accordion img {
+  transition: transform 0.2s ease;
+}
+
+.accordion.open img {
+  transform: rotate(180deg);
+}
+
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-panel p {
+  padding: 0 0 14px 0;
+  color: #555;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 /* REVIEWS */

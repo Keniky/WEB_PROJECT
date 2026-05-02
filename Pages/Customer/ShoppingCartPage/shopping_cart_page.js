@@ -1,20 +1,21 @@
 let totalPrice = document.querySelector('.amount');
+let cartItemsCount = document.querySelector('#cart-items-count');
 
 function removeNum(element) {
   let number = element.parentNode;
   number = number.querySelector("#numberOfItems");
-  if(number.innerText > 0){
-    number.innerText --;
+  if (number.innerText > 0) {
+    number.innerText--;
   }
   calculateSubAmmount(element);
   calculateAmmount(element.parentNode.parentNode);
 }
 
-function addNum(element){
+function addNum(element) {
   let number = element.parentNode;
   number = number.querySelector("#numberOfItems");
-  if(number.innerText < 20){
-    number.innerText ++;
+  if (number.innerText < 20) {
+    number.innerText++;
   }
 
   calculateSubAmmount(element);
@@ -22,7 +23,7 @@ function addNum(element){
 }
 
 //remove section
-function remove(element){
+function remove(element) {
   const main = document.querySelector('main');
 
   main.removeChild(element.parentNode);
@@ -33,30 +34,38 @@ function remove(element){
 
 //calculate amount section
 
-function calculateSubAmmount(element){
+function calculateSubAmmount(element) {
   let totalPrice = 0;
   const numberOfElement = element.parentNode.querySelector('#numberOfItems');
   const price = element.parentNode.parentNode.parentNode.querySelector('.price');
   const subTotal = element.parentNode.parentNode.parentNode.querySelector('.subtotal');
 
-  totalPrice = parseFloat(price.textContent.replace("$" , "")) * parseFloat(numberOfElement.innerText);
+  totalPrice = parseFloat(price.textContent.replace("$", "")) * parseFloat(numberOfElement.innerText);
 
   subTotal.innerText = "$" + totalPrice;
 }
 
 
-function calculateAmmount(){
+function calculateAmmount() {
   const items = document.querySelectorAll('.cart-item');
   const itemsArray = Array.from(items);
   let total = 0;
-  itemsArray.forEach(item  =>{
+  let count = 0;
+  itemsArray.forEach(item => {
     console.log(item);
     const subTotal = item.querySelector('.subtotal');
-    
-    total += parseFloat(subTotal.textContent.replace("$" , ""));
-    
+    const itemCount = item.querySelector('#numberOfItems');
+
+    total += parseFloat(subTotal.textContent.replace("$", ""));
+    count += parseInt(itemCount.innerText, 10) || 0;
+
   });
-  totalPrice.innerText ='$' + total;
+  totalPrice.innerText = '$' + total;
+  if (cartItemsCount) {
+    cartItemsCount.innerText = count;
+  }
 }
+
+calculateAmmount();
 
 

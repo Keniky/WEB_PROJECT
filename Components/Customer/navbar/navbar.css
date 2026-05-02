@@ -150,6 +150,11 @@
   filter: brightness(0) invert(1);
 }
 
+.navbar-actions .icon:hover {
+  transition: transform 0.2s ease;
+  transform: scale(1.2);
+}
+
 /* MOBILE TOGGLE */
 .navbar-toggle {
   display: none;
