@@ -16,6 +16,7 @@ add.addEventListener("click" , (ev)=>{
 
 let mainImage = document.getElementById("image");
 
+
 const image1 = document.getElementById("image1");
 mainImage.src = image1.src;
 const image2 = document.getElementById("image2");

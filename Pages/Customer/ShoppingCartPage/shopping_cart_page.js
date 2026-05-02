@@ -1,89 +1,62 @@
+let totalPrice = document.querySelector('.amount');
 
-const cartItems = document.querySelectorAll('.cart-item');
+function removeNum(element) {
+  let number = element.parentNode;
+  number = number.querySelector("#numberOfItems");
+  if(number.innerText > 0){
+    number.innerText --;
+  }
+  calculateSubAmmount(element);
+  calculateAmmount(element.parentNode.parentNode);
+}
 
-const totalAmount = document.querySelector('.amount');
+function addNum(element){
+  let number = element.parentNode;
+  number = number.querySelector("#numberOfItems");
+  if(number.innerText < 20){
+    number.innerText ++;
+  }
 
-function formatCurrency(value) {
-  return `$${value.toFixed(2)}`;
+  calculateSubAmmount(element);
+  calculateAmmount(element.parentNode.parentNode);
+}
+
+//remove section
+function remove(element){
+  const main = document.querySelector('main');
+
+  main.removeChild(element.parentNode);
+
+  calculateAmmount(element);
+
+}
+
+//calculate amount section
+
+function calculateSubAmmount(element){
+  let totalPrice = 0;
+  const numberOfElement = element.parentNode.querySelector('#numberOfItems');
+  const price = element.parentNode.parentNode.parentNode.querySelector('.price');
+  const subTotal = element.parentNode.parentNode.parentNode.querySelector('.subtotal');
+
+  totalPrice = parseFloat(price.textContent.replace("$" , "")) * parseFloat(numberOfElement.innerText);
+
+  subTotal.innerText = "$" + totalPrice;
 }
 
 
-function updateItemSubtotal(item) {
-  const quantity = item.querySelector('.counter span');
-
-  const subtotal = item.querySelector('.subtotal');
-
-  const unitPrice = Number.parseFloat(item.dataset.unitPrice) || 0;
-
-  const quantity = Number.parseInt(quantity.textContent, 10) || 1;
-
-  const subtotal = unitPrice * quantity;
-
-  subtotal.textContent = formatCurrency(subtotal);
-}
-
-function updateCartTotal() {
+function calculateAmmount(){
+  const items = document.querySelectorAll('.cart-item');
+  const itemsArray = Array.from(items);
   let total = 0;
-  cartItems.forEach((item) => {
-
-    if (!item.isConnected) {
-      return;
-    }
-
-    const quantity = item.querySelector('.counter span');
-    const unitPrice = Number.parseFloat(item.dataset.unitPrice) || 0;
-    const quantity = Number.parseInt(quantity.textContent, 10) || 1;
-
-    total += unitPrice * quantity;
+  itemsArray.forEach(item  =>{
+    console.log(item);
+    const subTotal = item.querySelector('.subtotal');
+    
+    total += parseFloat(subTotal.textContent.replace("$" , ""));
+    
   });
-
-  totalAmount.textContent = formatCurrency(total);
+  totalPrice.innerText ='$' + total;
 }
 
-cartItems.forEach((item) => {
-  const decreaseBtn = item.querySelector('.counter button:first-child');
 
-  const increaseBtn = item.querySelector('.counter button:last-child');
-
-  const removeBtn = item.querySelector('.remove');
-
-  const quantity = item.querySelector('.counter span');
-
-
-  decreaseBtn.addEventListener('click', () => {
-    const currentQuantity = Number.parseInt(quantity.textContent, 10) || 1;
-
-
-    if (currentQuantity <= 1) {
-      return;
-    }
-
-    const nextQuantity = currentQuantity - 1;
-
-    quantity.textContent = String(nextQuantity);
-
-    updateItemSubtotal(item);
-    updateCartTotal();
-  });
-
-  increaseBtn.addEventListener('click', () => {
-    const currentQuantity = Number.parseInt(quantity.textContent, 10) || 1;
-    if(currentQuantity >= 20) {
-      return;
-    }
-    const nextQuantity = currentQuantity + 1;
-
-    quantity.textContent = String(nextQuantity);
-    updateItemSubtotal(item);
-    updateCartTotal();
-  });
-
-  removeBtn.addEventListener('click', () => {
-    item.remove();
-    updateCartTotal();
-  });
-
-  updateItemSubtotal(item);
-});
-
-updateCartTotal();

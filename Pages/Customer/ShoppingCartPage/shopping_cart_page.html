@@ -124,19 +124,19 @@
           <p>Put here the name of the product been ordered here</p>
         </a>
 
-        <div class="col price">$22</div>
+        <div class="col price">$22.00</div>
 
         <div class="col qty">
           <div class="counter">
-            <button>-</button>
-            <span>1</span>
-            <button>+</button>
+            <button id="removeButton" onclick="removeNum(this)">-</button>
+            <span id="numberOfItems">1</span>
+            <button id="addButton" onclick="addNum(this)">+</button>
           </div>
         </div>
 
         <div class="col subtotal">$22</div>
 
-        <div class="col remove">✕</div>
+        <div class="col remove" onclick="remove(this)">✕</div>
       </div>
 
       <div class="cart-item" data-unit-price="22">
@@ -144,16 +144,16 @@
           <div class="img">Available Soon</div>
           <p>Put here the name of the product been ordered here</p>
         </a>
-        <div class="col price">$22</div>
+        <div class="col price">$22.03</div>
         <div class="col qty">
           <div class="counter">
-            <button>-</button>
-            <span>1</span>
-            <button>+</button>
+            <button id="removeButton" onclick="removeNum(this)">-</button>
+            <span id="numberOfItems">1</span>
+            <button id="addButton" onclick="addNum(this)">+</button>
           </div>
         </div>
         <div class="col subtotal">$22</div>
-        <div class="col remove">✕</div>
+        <div class="col remove" onclick="remove(this)">✕</div>
       </div>
 
       <div class="cart-item" data-unit-price="22">
@@ -161,16 +161,16 @@
           <div class="img">Available Soon</div>
           <p>Put here the name of the product been ordered here</p>
         </a>
-        <div class="col price">$22</div>
+        <div class="col price">$22.00</div>
         <div class="col qty">
           <div class="counter">
-            <button>-</button>
-            <span>1</span>
-            <button>+</button>
+            <button id="removeButton" onclick="removeNum(this)">-</button>
+            <span id="numberOfItems">1</span>
+            <button id="addButton" onclick="addNum(this)">+</button>
           </div>
         </div>
-        <div class="col subtotal">$22</div>
-        <div class="col remove">✕</div>
+        <div class="col subtotal">$22.00</div>
+        <div class="col remove" onclick="remove(this)">✕</div>
       </div>
 
       <!-- FOOTER -->
@@ -183,7 +183,7 @@
         <div class="checkout">
           <div class="total">
             <span>Total:</span>
-            <span class="amount">$230.00</span>
+            <span class="amount">$66.00</span>
           </div>
 
           <a href="../CheckoutPage/checkout_page.html" class="btn secondary">Proceed to Checkout →</a>
